@@ -31,5 +31,7 @@ namespace PlariumArcade.Model.DB
             return new Point(0, 0);
         }
 
+        public WorldObjects() { }
+
     }
 }

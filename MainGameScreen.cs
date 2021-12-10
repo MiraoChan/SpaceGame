@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlariumArcade.ViewModel.Initialization;
 
 namespace PlariumArcade
 {
@@ -17,6 +18,10 @@ namespace PlariumArcade
         public FlowLayoutPanel GetMainMapPanel() { return MainMapPanel; }
         public Button MoneyStat { get{ return moneyStat; } }
         public Button OreStat { get { return oreStat; } }
+        public Button MVtStat { get { return mVtStat; } }
+        public Button DamageStat { get { return damageStat; } }
+        public Button StrengthStat { get { return strengthStat; } }
+        public Button ExitButton { get { return exitButton; } }
         #endregion
 
         #region ValueSetters
@@ -28,7 +33,19 @@ namespace PlariumArcade
         {
             oreStat.Text = SetValue(oreStat.Text, val);
         }
-        public string SetValue(string str,int val) 
+        public void SetMVtStat(int val)
+        {
+            mVtStat.Text = SetValue(mVtStat.Text, val);
+        }
+        public void SetDamageStat(int val)
+        {
+            damageStat.Text = SetValue(damageStat.Text, val);
+        }
+        public void SetStrengthStat(int val)
+        {
+            strengthStat.Text = SetValue(strengthStat.Text, val);
+        }      
+        private string SetValue(string str,int val) 
         { 
             string[] subStr = str.Split(':');
             string newStr = subStr[0] + val;
@@ -38,29 +55,15 @@ namespace PlariumArcade
 
 
         public MainGameScreen()
-        {
-                  
+        {                 
             InitializeComponent();
+            new FontInstaller().SetGameScreenFont(this);
             this.Show();
-          
-            
+            new Initialization(this);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+        
 
-        }
-
-        private void MoveControl(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar.Equals('w')) { }
-            //чота делаем
-        }
-
-        private void MainMapPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

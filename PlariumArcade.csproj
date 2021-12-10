@@ -59,7 +59,10 @@
     <Compile Include="MenuScreen.Designer.cs">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DL\WorldObjects.cs" />
+    <Compile Include="Model\DL\MediaData.cs" />
+    <Compile Include="Model\DL\WorldData.cs" />
+    <Compile Include="Model\Entities\BaseEntities\EmplySpace.cs" />
+    <Compile Include="Model\Entities\BaseEntities\orbitalStation.cs" />
     <Compile Include="Model\Interfaces\ITileAble.cs" />
     <Compile Include="Model\Entities\BaseEntities\Asteroid.cs" />
     <Compile Include="Model\Entities\BaseEntities\NameGenerator.cs" />
@@ -79,11 +82,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Interfaces\IDraw.cs" />
+    <Compile Include="ViewModel\Events\MainGameScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ViewModel\GraphicControllers\MapDrawingController.cs" />
     <Compile Include="ViewModel\GraphicControllers\ShipDrawingController.cs" />
     <Compile Include="ViewModel\Initialization\FontInstaller.cs" />
     <Compile Include="ViewModel\Initialization\Initialization.cs" />
-    <Compile Include="ViewModel\PlayerActionControllers\MoveAction.cs" />
     <EmbeddedResource Include="MainGameScreen.resx">
       <DependentUpon>MainGameScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +105,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="Content\Fonts\DisposableDroidBB.ttf" />
     <None Include="Content\Fonts\DisposableDroidBB_bld.ttf" />
     <None Include="Content\Fonts\DisposableDroidBB_bldital.ttf" />

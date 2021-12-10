@@ -32,7 +32,8 @@ namespace PlariumArcade
         private void MVtStat_Click(object sender, EventArgs e)
         {
             this.Hide();
-          var gameScreen = new MainGameScreen();
+          //var gameScreen = 
+                new MainGameScreen();
         }
     }
 }

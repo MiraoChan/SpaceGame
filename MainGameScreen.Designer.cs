@@ -30,30 +30,30 @@ namespace PlariumArcade
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ExitButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.moneyStat = new System.Windows.Forms.Button();
-            this.MVtStat = new System.Windows.Forms.Button();
+            this.mVtStat = new System.Windows.Forms.Button();
             this.oreStat = new System.Windows.Forms.Button();
-            this.DamageStat = new System.Windows.Forms.Button();
-            this.StrengthStat = new System.Windows.Forms.Button();
+            this.damageStat = new System.Windows.Forms.Button();
+            this.strengthStat = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MainMapPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // ExitButton
+            // exitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitButton.FlatAppearance.BorderSize = 0;
-            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ExitButton.Location = new System.Drawing.Point(651, 1);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(67, 27);
-            this.ExitButton.TabIndex = 0;
-            this.ExitButton.Text = "X";
-            this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.Button1_Click);
+            this.exitButton.BackColor = System.Drawing.Color.Transparent;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.exitButton.Location = new System.Drawing.Point(651, 1);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(67, 27);
+            this.exitButton.TabIndex = 0;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // moneyStat
             // 
@@ -71,21 +71,21 @@ namespace PlariumArcade
             this.moneyStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.moneyStat.UseVisualStyleBackColor = false;
             // 
-            // MVtStat
+            // mVtStat
             // 
-            this.MVtStat.BackColor = System.Drawing.Color.Transparent;
-            this.MVtStat.Enabled = false;
-            this.MVtStat.FlatAppearance.BorderSize = 0;
-            this.MVtStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MVtStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MVtStat.ForeColor = System.Drawing.SystemColors.Control;
-            this.MVtStat.Location = new System.Drawing.Point(3, 408);
-            this.MVtStat.Name = "MVtStat";
-            this.MVtStat.Size = new System.Drawing.Size(210, 27);
-            this.MVtStat.TabIndex = 8;
-            this.MVtStat.Text = "МВт : 100000";
-            this.MVtStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MVtStat.UseVisualStyleBackColor = false;
+            this.mVtStat.BackColor = System.Drawing.Color.Transparent;
+            this.mVtStat.Enabled = false;
+            this.mVtStat.FlatAppearance.BorderSize = 0;
+            this.mVtStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mVtStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mVtStat.ForeColor = System.Drawing.SystemColors.Control;
+            this.mVtStat.Location = new System.Drawing.Point(3, 408);
+            this.mVtStat.Name = "mVtStat";
+            this.mVtStat.Size = new System.Drawing.Size(210, 27);
+            this.mVtStat.TabIndex = 8;
+            this.mVtStat.Text = "MVt : 100000";
+            this.mVtStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mVtStat.UseVisualStyleBackColor = false;
             // 
             // oreStat
             // 
@@ -103,37 +103,37 @@ namespace PlariumArcade
             this.oreStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.oreStat.UseVisualStyleBackColor = false;
             // 
-            // DamageStat
+            // damageStat
             // 
-            this.DamageStat.BackColor = System.Drawing.Color.Transparent;
-            this.DamageStat.Enabled = false;
-            this.DamageStat.FlatAppearance.BorderSize = 0;
-            this.DamageStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DamageStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DamageStat.ForeColor = System.Drawing.SystemColors.Control;
-            this.DamageStat.Location = new System.Drawing.Point(3, 430);
-            this.DamageStat.Name = "DamageStat";
-            this.DamageStat.Size = new System.Drawing.Size(210, 27);
-            this.DamageStat.TabIndex = 10;
-            this.DamageStat.Text = "Damage : 100000";
-            this.DamageStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DamageStat.UseVisualStyleBackColor = false;
+            this.damageStat.BackColor = System.Drawing.Color.Transparent;
+            this.damageStat.Enabled = false;
+            this.damageStat.FlatAppearance.BorderSize = 0;
+            this.damageStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.damageStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.damageStat.ForeColor = System.Drawing.SystemColors.Control;
+            this.damageStat.Location = new System.Drawing.Point(3, 430);
+            this.damageStat.Name = "damageStat";
+            this.damageStat.Size = new System.Drawing.Size(210, 27);
+            this.damageStat.TabIndex = 10;
+            this.damageStat.Text = "Damage : 100000";
+            this.damageStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.damageStat.UseVisualStyleBackColor = false;
             // 
-            // StrengthStat
+            // strengthStat
             // 
-            this.StrengthStat.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthStat.Enabled = false;
-            this.StrengthStat.FlatAppearance.BorderSize = 0;
-            this.StrengthStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StrengthStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StrengthStat.ForeColor = System.Drawing.SystemColors.Control;
-            this.StrengthStat.Location = new System.Drawing.Point(3, 454);
-            this.StrengthStat.Name = "StrengthStat";
-            this.StrengthStat.Size = new System.Drawing.Size(210, 27);
-            this.StrengthStat.TabIndex = 12;
-            this.StrengthStat.Text = "Strength: 100000";
-            this.StrengthStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StrengthStat.UseVisualStyleBackColor = false;
+            this.strengthStat.BackColor = System.Drawing.Color.Transparent;
+            this.strengthStat.Enabled = false;
+            this.strengthStat.FlatAppearance.BorderSize = 0;
+            this.strengthStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.strengthStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.strengthStat.ForeColor = System.Drawing.SystemColors.Control;
+            this.strengthStat.Location = new System.Drawing.Point(3, 454);
+            this.strengthStat.Name = "strengthStat";
+            this.strengthStat.Size = new System.Drawing.Size(210, 27);
+            this.strengthStat.TabIndex = 12;
+            this.strengthStat.Text = "Strength: 100000";
+            this.strengthStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.strengthStat.UseVisualStyleBackColor = false;
             // 
             // MainMapPanel
             // 
@@ -143,7 +143,6 @@ namespace PlariumArcade
             this.MainMapPanel.Name = "MainMapPanel";
             this.MainMapPanel.Size = new System.Drawing.Size(720, 480);
             this.MainMapPanel.TabIndex = 13;
-            this.MainMapPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainMapPanel_Paint);
             // 
             // MainGameScreen
             // 
@@ -151,12 +150,12 @@ namespace PlariumArcade
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlariumArcade.Properties.Resources.background1;
             this.ClientSize = new System.Drawing.Size(720, 480);
-            this.Controls.Add(this.StrengthStat);
-            this.Controls.Add(this.DamageStat);
+            this.Controls.Add(this.strengthStat);
+            this.Controls.Add(this.damageStat);
             this.Controls.Add(this.oreStat);
-            this.Controls.Add(this.MVtStat);
+            this.Controls.Add(this.mVtStat);
             this.Controls.Add(this.moneyStat);
-            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.MainMapPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainGameScreen";
@@ -169,12 +168,12 @@ namespace PlariumArcade
 
         #endregion
 
-        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button moneyStat;
-        private System.Windows.Forms.Button MVtStat;
+        private System.Windows.Forms.Button mVtStat;
         private System.Windows.Forms.Button oreStat;
-        private System.Windows.Forms.Button DamageStat;
-        private System.Windows.Forms.Button StrengthStat;
+        private System.Windows.Forms.Button damageStat;
+        private System.Windows.Forms.Button strengthStat;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel MainMapPanel;
     }

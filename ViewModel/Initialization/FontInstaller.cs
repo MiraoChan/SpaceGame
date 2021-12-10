@@ -16,8 +16,14 @@ namespace PlariumArcade.ViewModel.Initialization
             screen.StartButton.Font = InstallFont(18);
             screen.ExitButton.Font = InstallFont(18);
         }
-        public void SetGameScreenFont() {
-        
+        public void SetGameScreenFont(MainGameScreen screen)
+        {
+            screen.MoneyStat.Font = InstallFont(18);
+            screen.OreStat.Font = InstallFont(18);
+            screen.MVtStat.Font = InstallFont(18);
+            screen.DamageStat.Font = InstallFont(18);
+            screen.StrengthStat.Font = InstallFont(18);
+            screen.ExitButton.Font = InstallFont(18);
         }
        public Font InstallFont(int size)
         {         

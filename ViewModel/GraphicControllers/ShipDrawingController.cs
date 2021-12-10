@@ -18,7 +18,9 @@ namespace PlariumArcade.ViewModel.GraphicControllers
                 Size = new Size(80, 80),
                 Image = image
             };
-            screen.GetMainMapPanel().Controls.Add(pic);        
+            screen.Controls.Add(pic);
+            pic.BringToFront();
+            pic.BackColor = Color.Transparent;
         }
     }
 }

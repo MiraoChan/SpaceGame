@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainGameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +81,7 @@
     <Compile Include="Model\Interfaces\IDraw.cs" />
     <Compile Include="ViewModel\GraphicControllers\MapDrawingController.cs" />
     <Compile Include="ViewModel\GraphicControllers\ShipDrawingController.cs" />
+    <Compile Include="ViewModel\Initialization\FontInstaller.cs" />
     <Compile Include="ViewModel\Initialization\Initialization.cs" />
     <Compile Include="ViewModel\PlayerActionControllers\MoveAction.cs" />
     <EmbeddedResource Include="MainGameScreen.resx">
@@ -117,6 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\background.jpg" />
+    <Content Include="Content\Images\Tiles\Asteroid.png" />
+    <Content Include="Content\Images\Tiles\Planet1.png" />
+    <Content Include="Content\Images\Tiles\Planet2.png" />
+    <Content Include="Content\Images\Tiles\SpaceShip.png" />
     <None Include="Content\Images\backgroundMenu.jpg" />
     <None Include="Content\Images\backgroundCell.jpg" />
     <None Include="Content\Images\backgroundCell.png" />

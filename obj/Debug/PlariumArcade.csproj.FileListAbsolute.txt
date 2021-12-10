@@ -12,7 +12,6 @@ C:\Users\user\Desktop\PlariumArcade\obj\Debug\PlariumArcade.MenuScreen.resources
 C:\Users\user\Desktop\SpaceGameRep\bin\Debug\PlariumArcade.exe.config
 C:\Users\user\Desktop\SpaceGameRep\bin\Debug\PlariumArcade.exe
 C:\Users\user\Desktop\SpaceGameRep\bin\Debug\PlariumArcade.pdb
-C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.MainGameScreen.resources
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.MenuScreen.resources
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.Properties.Resources.resources
@@ -20,3 +19,4 @@ C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.GenerateResour
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.exe
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.pdb
+C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.AssemblyReference.cache

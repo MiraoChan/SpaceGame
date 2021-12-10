@@ -31,9 +31,9 @@ namespace PlariumArcade
         {
             this.components = new System.ComponentModel.Container();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.MoneyStat = new System.Windows.Forms.Button();
+            this.moneyStat = new System.Windows.Forms.Button();
             this.MVtStat = new System.Windows.Forms.Button();
-            this.OreStat = new System.Windows.Forms.Button();
+            this.oreStat = new System.Windows.Forms.Button();
             this.DamageStat = new System.Windows.Forms.Button();
             this.StrengthStat = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -55,21 +55,21 @@ namespace PlariumArcade
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // MoneyStat
+            // moneyStat
             // 
-            this.MoneyStat.BackColor = System.Drawing.Color.Transparent;
-            this.MoneyStat.Enabled = false;
-            this.MoneyStat.FlatAppearance.BorderSize = 0;
-            this.MoneyStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MoneyStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MoneyStat.ForeColor = System.Drawing.SystemColors.Control;
-            this.MoneyStat.Location = new System.Drawing.Point(3, 2);
-            this.MoneyStat.Name = "MoneyStat";
-            this.MoneyStat.Size = new System.Drawing.Size(210, 27);
-            this.MoneyStat.TabIndex = 7;
-            this.MoneyStat.Text = "$ : 10000000";
-            this.MoneyStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MoneyStat.UseVisualStyleBackColor = false;
+            this.moneyStat.BackColor = System.Drawing.Color.Transparent;
+            this.moneyStat.Enabled = false;
+            this.moneyStat.FlatAppearance.BorderSize = 0;
+            this.moneyStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moneyStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.moneyStat.ForeColor = System.Drawing.SystemColors.Control;
+            this.moneyStat.Location = new System.Drawing.Point(3, 2);
+            this.moneyStat.Name = "moneyStat";
+            this.moneyStat.Size = new System.Drawing.Size(210, 27);
+            this.moneyStat.TabIndex = 7;
+            this.moneyStat.Text = "$ : 10000000";
+            this.moneyStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.moneyStat.UseVisualStyleBackColor = false;
             // 
             // MVtStat
             // 
@@ -87,21 +87,21 @@ namespace PlariumArcade
             this.MVtStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MVtStat.UseVisualStyleBackColor = false;
             // 
-            // OreStat
+            // oreStat
             // 
-            this.OreStat.BackColor = System.Drawing.Color.Transparent;
-            this.OreStat.Enabled = false;
-            this.OreStat.FlatAppearance.BorderSize = 0;
-            this.OreStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OreStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OreStat.ForeColor = System.Drawing.SystemColors.Control;
-            this.OreStat.Location = new System.Drawing.Point(3, 24);
-            this.OreStat.Name = "OreStat";
-            this.OreStat.Size = new System.Drawing.Size(210, 27);
-            this.OreStat.TabIndex = 9;
-            this.OreStat.Text = "Ore : 10000000";
-            this.OreStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OreStat.UseVisualStyleBackColor = false;
+            this.oreStat.BackColor = System.Drawing.Color.Transparent;
+            this.oreStat.Enabled = false;
+            this.oreStat.FlatAppearance.BorderSize = 0;
+            this.oreStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oreStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.oreStat.ForeColor = System.Drawing.SystemColors.Control;
+            this.oreStat.Location = new System.Drawing.Point(3, 24);
+            this.oreStat.Name = "oreStat";
+            this.oreStat.Size = new System.Drawing.Size(210, 27);
+            this.oreStat.TabIndex = 9;
+            this.oreStat.Text = "Ore : 10000000";
+            this.oreStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.oreStat.UseVisualStyleBackColor = false;
             // 
             // DamageStat
             // 
@@ -143,6 +143,7 @@ namespace PlariumArcade
             this.MainMapPanel.Name = "MainMapPanel";
             this.MainMapPanel.Size = new System.Drawing.Size(720, 480);
             this.MainMapPanel.TabIndex = 13;
+            this.MainMapPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainMapPanel_Paint);
             // 
             // MainGameScreen
             // 
@@ -152,9 +153,9 @@ namespace PlariumArcade
             this.ClientSize = new System.Drawing.Size(720, 480);
             this.Controls.Add(this.StrengthStat);
             this.Controls.Add(this.DamageStat);
-            this.Controls.Add(this.OreStat);
+            this.Controls.Add(this.oreStat);
             this.Controls.Add(this.MVtStat);
-            this.Controls.Add(this.MoneyStat);
+            this.Controls.Add(this.moneyStat);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.MainMapPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -169,9 +170,9 @@ namespace PlariumArcade
         #endregion
 
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button MoneyStat;
+        private System.Windows.Forms.Button moneyStat;
         private System.Windows.Forms.Button MVtStat;
-        private System.Windows.Forms.Button OreStat;
+        private System.Windows.Forms.Button oreStat;
         private System.Windows.Forms.Button DamageStat;
         private System.Windows.Forms.Button StrengthStat;
         private System.Windows.Forms.Timer timer1;

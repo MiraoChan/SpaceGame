@@ -12,7 +12,30 @@ namespace PlariumArcade
 {
     public partial class MainGameScreen : Form
     {
+
+        #region Properties
         public FlowLayoutPanel GetMainMapPanel() { return MainMapPanel; }
+        public Button MoneyStat { get{ return moneyStat; } }
+        public Button OreStat { get { return oreStat; } }
+        #endregion
+
+        #region ValueSetters
+        public void SetMoneyStat(int val) 
+        {
+            moneyStat.Text = SetValue(moneyStat.Text, val);
+        }
+        public void SetOreStat(int val)
+        {
+            oreStat.Text = SetValue(oreStat.Text, val);
+        }
+        public string SetValue(string str,int val) 
+        { 
+            string[] subStr = str.Split(':');
+            string newStr = subStr[0] + val;
+            return newStr;
+        }
+        #endregion
+
 
         public MainGameScreen()
         {
@@ -33,6 +56,11 @@ namespace PlariumArcade
         {
             if (e.KeyChar.Equals('w')) { }
             //чота делаем
+        }
+
+        private void MainMapPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

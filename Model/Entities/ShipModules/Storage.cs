@@ -4,7 +4,7 @@
     /// Class of storage module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Storage : ShipModule
+    public sealed class Storage : ShipModule
     {
         public int OreLimit { get; set; }
 

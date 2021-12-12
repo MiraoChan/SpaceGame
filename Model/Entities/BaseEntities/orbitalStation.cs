@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace PlariumArcade.Model.Entities.BaseEntities
 {
-    class orbitalStation : ITileAble
+    class OrbitalStation : ITileAble
     {
         public Image Tile { get; set; }
-        public orbitalStation() { new NotImplementedException(); }
+
+        public OrbitalStation(Image img) { Tile = img; }
     }
 }

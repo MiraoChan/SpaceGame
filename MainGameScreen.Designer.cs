@@ -1,4 +1,6 @@
 ﻿
+using PlariumArcade.ViewModel.Initialization;
+
 namespace PlariumArcade
 {
     partial class MainGameScreen
@@ -54,6 +56,7 @@ namespace PlariumArcade
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+
             // 
             // moneyStat
             // 
@@ -139,6 +142,7 @@ namespace PlariumArcade
             // 
             this.MainMapPanel.BackColor = System.Drawing.Color.Transparent;
             this.MainMapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainMapPanel.Enabled = false;
             this.MainMapPanel.Location = new System.Drawing.Point(0, 0);
             this.MainMapPanel.Name = "MainMapPanel";
             this.MainMapPanel.Size = new System.Drawing.Size(720, 480);
@@ -158,10 +162,12 @@ namespace PlariumArcade
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.MainMapPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "MainGameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MoveControl);
+
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainGameScreen_KeyDown);
             this.ResumeLayout(false);
 
         }

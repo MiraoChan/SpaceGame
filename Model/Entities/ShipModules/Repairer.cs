@@ -4,7 +4,7 @@
     /// Class of repairer module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Repairer : ShipModule
+    public sealed class Repairer : ShipModule
     {
         public int Efficiency { get; set; }
 

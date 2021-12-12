@@ -4,7 +4,7 @@
     /// Class of command center module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class CommandCenter : ShipModule
+    public sealed class CommandCenter : ShipModule
     {
         public int FramesLimit { get; set; }
 

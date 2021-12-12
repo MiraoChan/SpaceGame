@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Model",
+    "\\Model\\Entities",
+    "\\Model\\Entities\\BaseEntities"
   ],
-  "SelectedNode": "\\PlariumArcade.sln",
+  "SelectedNode": "\\Model\\Entities\\BaseEntities\\Spaceship.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -4,7 +4,7 @@
     /// Class of converter module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Converter : ShipModule
+    public sealed class Converter : ShipModule
     {
         public int AmountOrePer1MBt { get; set; }
 

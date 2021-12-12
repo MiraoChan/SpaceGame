@@ -4,7 +4,7 @@
     /// Class of gun module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Gun : ShipModule
+    public sealed class Gun : ShipModule
     {
         public int Damage { get; set; }
 

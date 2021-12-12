@@ -5,11 +5,12 @@ using PlariumArcade.Model.Entities.BaseEntities;
 namespace PlariumTestGame.Model.Entities.CoreEntities
 {
     public class Asteroid : Planet
-    {     
+    {            
         public int AmountOfOre { get; set; } 
-        public Asteroid()
+        public Asteroid(Image img):base(img)
         {
-            Name = new NameGenerator().GenerateName(this);
+            Tile = img;
+            Name = NameGenerator.GenerateName(this);
             AmountOfOre = new Random().Next(100, 1000);
         }
 

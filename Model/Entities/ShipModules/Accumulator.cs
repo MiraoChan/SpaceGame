@@ -4,7 +4,7 @@
     /// Class of accumulator module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Accumulator : ShipModule
+    public sealed class Accumulator : ShipModule
     {
         public int Limit { get; set; }
 

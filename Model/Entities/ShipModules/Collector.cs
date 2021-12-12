@@ -4,7 +4,7 @@
     /// Class of collector module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Collector : ShipModule
+    public sealed class Collector : ShipModule
     {
         public int CollectVolume { get; set; }
 

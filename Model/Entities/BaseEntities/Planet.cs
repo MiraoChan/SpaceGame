@@ -8,7 +8,10 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         public string Name { get; set; }
         public Image Tile { get; set; }
 
-        public Planet() { Name = new NameGenerator().GenerateName(this); }
+        public Planet(Image img) { 
+            Name = NameGenerator.GenerateName(this);
+            Tile = img;
+        }
 
     }
 }

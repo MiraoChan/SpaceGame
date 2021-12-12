@@ -4,7 +4,7 @@
     /// Class of command center module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Engine : ShipModule
+    public sealed class Engine : ShipModule
     {
         public int ConsumePerFight { get; set; }
         public int ConsumePer100km { get; set; }

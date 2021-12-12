@@ -4,7 +4,7 @@
     /// Class of generator module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Generator : ShipModule
+    public sealed class Generator : ShipModule
     {
         public int AmountMBtPer100km { get; set; }
 

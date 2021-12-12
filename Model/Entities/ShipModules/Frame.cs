@@ -4,7 +4,7 @@
     /// Class of frame module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public class Frame : ShipModule
+    public sealed class Frame : ShipModule
     {
 
         /// <summary>

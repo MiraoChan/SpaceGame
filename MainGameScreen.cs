@@ -90,7 +90,7 @@ namespace PlariumArcade
             InitializeComponent();
 
             Controller = new GameController(this);
-           //new FontInstaller().SetGameScreenFont(this);
+        //   new FontInstaller().SetGameScreenFont(this);
             this.Show();
             Console.WriteLine("");
 

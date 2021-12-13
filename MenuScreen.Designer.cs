@@ -29,6 +29,7 @@ namespace PlariumArcade
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuScreen));
             this.exitButton = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
             this.mainLabel = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@ namespace PlariumArcade
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuScreen";

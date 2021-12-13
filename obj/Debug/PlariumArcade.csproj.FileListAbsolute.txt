@@ -20,3 +20,5 @@ C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.CoreCompileInp
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.exe
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.pdb
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.OrbitalStationMenu.resources
+C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.ShipModulesMenu.resources

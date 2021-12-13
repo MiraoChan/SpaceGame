@@ -22,7 +22,8 @@ namespace PlariumArcade.ViewModel.GraphicControllers
             {
                 if (obj != null)
                 {
-                    PictureBox currPB= CreatePictureBox( obj.Tile, WorldData.GetPoint(obj));
+                    PictureBox currPB= CreatePictureBox(obj.GetType().ToString().Split('.').Last(),
+                        obj.Tile, WorldData.GetPoint(obj));
                     DrawObjects(screen,currPB);
                 }                                            
             }
@@ -39,7 +40,9 @@ namespace PlariumArcade.ViewModel.GraphicControllers
                 {
                     if (WorldData.WorldMap[x, y].Tile != MapObjects[x, y].Image) //mismatch is found
                     {
-                        MapObjects[x, y] = CreatePictureBox(WorldData.WorldMap[x, y].Tile, WorldData.GetPoint(WorldData.WorldMap[x, y]));
+                        MapObjects[x, y] = CreatePictureBox(WorldData.WorldMap[x, y].GetType().ToString().Split('.').Last(),
+                                                                WorldData.WorldMap[x, y].Tile,
+                                                              WorldData.GetPoint(WorldData.WorldMap[x, y]));
                         MapObjects[x, y].BackColor = Color.Transparent;
                         MapObjects[x, y].BringToFront();
                     }
@@ -63,11 +66,11 @@ namespace PlariumArcade.ViewModel.GraphicControllers
         /// <param name="image">object image</param>
         /// <param name="p">object location(point)</param>
         /// <returns>new PictureBox</returns>
-        public static PictureBox CreatePictureBox(Image image, Point p) 
+        public static PictureBox CreatePictureBox(String name,Image image, Point p) 
         {
             return new PictureBox
             {
-                Name = p.X.ToString() +"/"+ p.Y.ToString(),
+                Name = name,
                 Location = new Point(80 * p.X, 80 * p.Y),
                 Size = new Size(80, 80),
                 Image = image

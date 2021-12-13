@@ -22,6 +22,14 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                 PropertiesChange();
             }
         }
+        public void ChangeLevel()
+        {
+            if (Level < 3)
+            {
+                Level++;
+            }
+            PropertiesChange();
+        }
         public int Price { get; set; }
         public int Durability
         {

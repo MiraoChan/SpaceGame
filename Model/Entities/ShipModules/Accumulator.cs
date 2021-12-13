@@ -1,4 +1,6 @@
-﻿namespace PlariumTestGame.Model.Entities.ShipModules
+﻿using System;
+
+namespace PlariumTestGame.Model.Entities.ShipModules
 {
     /// <summary>
     /// Class of accumulator module.
@@ -6,7 +8,13 @@
     /// </summary>
     public sealed class Accumulator : ShipModule
     {
-        public int Limit { get; set; }
+        private int limitEnergy;
+
+        public int LimitEnergy 
+        {
+            get => limitEnergy;
+            set => limitEnergy = limitEnergy < 0  ? throw new ArgumentException("illegal value") : value;
+        }
 
         /// <summary>
         /// Changes all properties depends on current level.
@@ -19,21 +27,21 @@
                     {
                         Price = 150;
                         Durability = 10;
-                        Limit = 1000000;
+                        LimitEnergy = 1000000;
                         break;
                     }
                 case 2:
                     {
                         Price = 300;
                         Durability = 15;
-                        Limit = 2000000;
+                        LimitEnergy = 2000000;
                         break;
                     }
                 case 3:
                     {
                         Price = 450;
                         Durability = 20;
-                        Limit = 3000000;
+                        LimitEnergy = 3000000;
                         break;
                     }
 
@@ -43,7 +51,10 @@
         }
         public Accumulator(int level) : base(level)
         {
+            if (level > 3 || level < 1) { throw new ArgumentException("wrong level data"); }
             Level = level;
+            PropertiesChange();
         }
+      
     }
 }

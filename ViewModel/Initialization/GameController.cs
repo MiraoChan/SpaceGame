@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using PlariumArcade.Model.DB;
 using PlariumArcade.Model.Entities.Generators;
 using PlariumArcade.Model.Interfaces;
+using PlariumArcade.ViewModel.Events;
 using PlariumArcade.ViewModel.GraphicControllers;
 using PlariumTestGame.Model.Entities.CoreEntities;
 
@@ -46,7 +47,7 @@ namespace PlariumArcade.ViewModel.Initialization
 
 
             EvController = new EventsController(this,Screen);
-           
+            new WorldEvents().CheckCollision(screen);
             //отображение графики
             RenewInfo();          
             ShowGraphics();

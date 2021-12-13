@@ -32,6 +32,7 @@ namespace PlariumArcade
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGameScreen));
             this.exitButton = new System.Windows.Forms.Button();
             this.moneyStat = new System.Windows.Forms.Button();
             this.mVtStat = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@ namespace PlariumArcade
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-
             // 
             // moneyStat
             // 
@@ -162,11 +162,11 @@ namespace PlariumArcade
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.MainMapPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "MainGameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainGameScreen_KeyDown);
             this.ResumeLayout(false);
 

@@ -44,6 +44,8 @@
         public CommandCenter(int level) : base(level)
         {
             Level = level;
+            PropertiesChange();
         }
+       
     }
 }

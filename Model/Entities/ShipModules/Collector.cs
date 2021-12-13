@@ -44,6 +44,8 @@
         public Collector(int level) : base(level)
         {
             Level = level;
+            PropertiesChange();
         }
+      
     }
 }

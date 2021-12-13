@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Content\Images\Pirates.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,6 +62,8 @@
     <Compile Include="MenuScreen.Designer.cs">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Actions\ShipModulesActions\AccumulatorAction.cs" />
+    <Compile Include="Model\DataControllers\ModulesController.cs" />
     <Compile Include="Model\DataControllers\WorldObjectsController.cs" />
     <Compile Include="Model\Data\MediaData.cs" />
     <Compile Include="Model\Data\WorldData.cs" />
@@ -81,9 +86,22 @@
     <Compile Include="Model\Entities\ShipModules\ShipModule.cs" />
     <Compile Include="Model\Entities\ShipModules\Storage.cs" />
     <Compile Include="Model\Interfaces\IViewSubscriber.cs" />
+    <Compile Include="OrbitalStationMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrbitalStationMenu.Designer.cs">
+      <DependentUpon>OrbitalStationMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Interfaces\IDraw.cs" />
+    <Compile Include="ShipModulesMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipModulesMenu.Designer.cs">
+      <DependentUpon>ShipModulesMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Events\WorldEvents.cs" />
     <Compile Include="ViewModel\GraphicControllers\MapDrawingController.cs" />
     <Compile Include="ViewModel\GraphicControllers\ShipDrawingController.cs" />
     <Compile Include="ViewModel\Initialization\EventsController.cs" />
@@ -95,6 +113,9 @@
     <EmbeddedResource Include="MenuScreen.resx">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrbitalStationMenu.resx">
+      <DependentUpon>OrbitalStationMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,6 +126,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShipModulesMenu.resx">
+      <DependentUpon>ShipModulesMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="Content\Fonts\DisposableDroidBB.ttf" />
     <None Include="Content\Fonts\DisposableDroidBB_bld.ttf" />
@@ -125,6 +149,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\background.jpg" />
+    <None Include="Content\Images\backgroundCellModules.png" />
+    <Content Include="Content\Images\Pirates.ico" />
     <Content Include="Content\Images\Tiles\Asteroid.png" />
     <Content Include="Content\Images\Tiles\Attack.png" />
     <Content Include="Content\Images\Tiles\Empty.png" />
@@ -137,8 +163,6 @@
     <None Include="Content\Images\backgroundCell.jpg" />
     <None Include="Content\Images\backgroundCell.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\Events\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

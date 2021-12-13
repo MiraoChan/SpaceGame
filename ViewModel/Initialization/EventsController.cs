@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PlariumArcade.Model.DB;
+using PlariumArcade.ViewModel.Events;
 using PlariumArcade.ViewModel.GraphicControllers;
 
 namespace PlariumArcade.ViewModel.Initialization
@@ -28,6 +29,7 @@ namespace PlariumArcade.ViewModel.Initialization
                    WorldData.Spaceship.Coordinates.Y
                     );
                 ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                new WorldEvents().CheckCollision(Screen);
             }
         }
         public void GoRight() 
@@ -40,7 +42,8 @@ namespace PlariumArcade.ViewModel.Initialization
                        WorldData.Spaceship.Coordinates.Y
                         );
                     ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
-                }
+                new WorldEvents().CheckCollision(Screen);
+            }
             }
         public void GoUp() 
         {
@@ -52,6 +55,7 @@ namespace PlariumArcade.ViewModel.Initialization
                                WorldData.Spaceship.Coordinates.Y - 1
                                );
                 ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                new WorldEvents().CheckCollision(Screen);
             }
         }
         public void GoDown()
@@ -64,6 +68,7 @@ namespace PlariumArcade.ViewModel.Initialization
                               WorldData.Spaceship.Coordinates.Y + 1
                               );
                 ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                new WorldEvents().CheckCollision(Screen);
             }
         }
     }

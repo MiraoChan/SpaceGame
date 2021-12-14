@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PlariumArcade.Model.DB;
 using PlariumArcade.ViewModel.Events;
 using PlariumArcade.ViewModel.GraphicControllers;
@@ -18,6 +19,12 @@ namespace PlariumArcade.ViewModel.Initialization
         {
             this.gameController = gameController;
             this.Screen = Screen;
+            ShipDrawingController.Picture.MouseClick += new MouseEventHandler((o, a) => { OpenShipModules(); });
+        }
+
+        public void OpenShipModules() {
+            _ = new ShipModulesMenu(Screen);
+
         }
 
         public void GoLeft() {

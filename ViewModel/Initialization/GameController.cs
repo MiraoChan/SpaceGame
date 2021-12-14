@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PlariumArcade.Model.DB;
 using PlariumArcade.Model.Entities.Generators;
 using PlariumArcade.Model.Interfaces;
@@ -43,14 +44,16 @@ namespace PlariumArcade.ViewModel.Initialization
             WorldData.Spaceship = new Spaceship(cryptocurrency: 2500, energy: 5000000);
             WorldData.Spaceship.Subscribers.Add(this);
             GenerateNewWorld();
-            //Подключение контроллеров
-
-
-            EvController = new EventsController(this,Screen);
-            new WorldEvents().CheckCollision(screen);
+                      
+           
             //отображение графики
             RenewInfo();          
             ShowGraphics();
+
+            //Подключение контроллеров
+            EvController = new EventsController(this, Screen);
+            new WorldEvents().CheckCollision(screen);
+
         }
 
         public void ShowGraphics() {
@@ -60,7 +63,7 @@ namespace PlariumArcade.ViewModel.Initialization
 
         public void GenerateNewWorld()  
         {
-            WorldData.WorldMap[4, 2] = new Planet(Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/Planet1.png"));
+            WorldData.WorldMap[4, 2] = new Planet(Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/Planet1.png"));
             new WorldObjectsGenerator().GenerateNewWorld(amount_planets: 2,amount_asteroids: 0,amount_orbitalStation: 1);
         }
 

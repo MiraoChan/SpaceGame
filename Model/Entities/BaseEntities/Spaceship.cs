@@ -104,7 +104,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
             damage = 0;
             ore = 0;
             coordinates = new Point(3,3);
-            tile = Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/SpaceShip.png");
+            tile = Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/SpaceShip.png");
         }
     }
 }

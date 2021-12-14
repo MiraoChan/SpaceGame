@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Drawing;
+using System.Linq;
+using PlariumArcade.Model.DL;
 
 namespace PlariumTestGame.Model.Entities.ShipModules
 {
@@ -28,6 +31,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 150;
                         Durability = 10;
                         LimitEnergy = 1000000;
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 2:
@@ -35,6 +39,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 300;
                         Durability = 15;
                         LimitEnergy = 2000000;
+                        Tile = MediaData.ImageModules2lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 3:
@@ -42,6 +47,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 450;
                         Durability = 20;
                         LimitEnergy = 3000000;
+                        Tile = MediaData.ImageModules3lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
 

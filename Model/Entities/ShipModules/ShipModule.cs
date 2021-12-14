@@ -42,6 +42,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
         protected ShipModule(int level)
         {
             Level = level;
+
         }
 
     }

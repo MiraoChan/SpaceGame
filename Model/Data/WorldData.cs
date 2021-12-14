@@ -34,6 +34,20 @@ namespace PlariumArcade.Model.DB
             }          
             return new Point(0, 0);
         }
+        public static Point GetModulePoint(ITileAble value)
+        {
+            for (int x = 0; x < Spaceship.ShipModules.GetLength(0); ++x)
+            {
+                for (int y = 0; y < Spaceship.ShipModules.GetLength(1); ++y)
+                {
+                    if (Spaceship.ShipModules[x, y] == value)
+                    {                  
+                        return new Point(x, y);
+                    }
+                }
+            }
+            return new Point(0, 0);
+        }
 
         public WorldData()
         {
@@ -43,7 +57,7 @@ namespace PlariumArcade.Model.DB
                 {
                     WorldMap[x, y] = null;
                 }
-            }
+            }         
 
         }
     }

@@ -64,7 +64,6 @@
     </Compile>
     <Compile Include="Model\Actions\ShipModulesActions\AccumulatorAction.cs" />
     <Compile Include="Model\DataControllers\ModulesController.cs" />
-    <Compile Include="Model\DataControllers\WorldObjectsController.cs" />
     <Compile Include="Model\Data\MediaData.cs" />
     <Compile Include="Model\Data\WorldData.cs" />
     <Compile Include="Model\Entities\BaseEntities\orbitalStation.cs" />
@@ -103,6 +102,7 @@
     </Compile>
     <Compile Include="ViewModel\Events\WorldEvents.cs" />
     <Compile Include="ViewModel\GraphicControllers\MapDrawingController.cs" />
+    <Compile Include="ViewModel\GraphicControllers\ModulesDrawingController.cs" />
     <Compile Include="ViewModel\GraphicControllers\ShipDrawingController.cs" />
     <Compile Include="ViewModel\Initialization\EventsController.cs" />
     <Compile Include="ViewModel\Initialization\FontInstaller.cs" />

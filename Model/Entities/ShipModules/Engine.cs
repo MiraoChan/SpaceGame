@@ -1,4 +1,7 @@
-﻿namespace PlariumTestGame.Model.Entities.ShipModules
+﻿using System.Linq;
+using PlariumArcade.Model.DL;
+
+namespace PlariumTestGame.Model.Entities.ShipModules
 {
     /// <summary>
     /// Class of command center module.
@@ -22,6 +25,7 @@
                         Durability = -10;
                         ConsumePerFight = 10;
                         ConsumePer100km = 50;
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 2:
@@ -30,6 +34,7 @@
                         Durability = -8;
                         ConsumePerFight = 8;
                         ConsumePer100km = 48;
+                        Tile = MediaData.ImageModules2lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 3:
@@ -38,6 +43,7 @@
                         Durability = -5;
                         ConsumePerFight = 6;
                         ConsumePer100km = 45;
+                        Tile = MediaData.ImageModules3lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
 
@@ -48,6 +54,7 @@
         public Engine(int level) : base(level)
         {
             Level = level;
+            PropertiesChange();
         }
     }
 }

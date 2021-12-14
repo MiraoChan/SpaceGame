@@ -32,21 +32,20 @@ namespace PlariumArcade
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.modulesPanel = new System.Windows.Forms.Panel();
+            this.efficiency = new System.Windows.Forms.Button();
+            this.amountMBtPer100km = new System.Windows.Forms.Button();
+            this.consumePer100km = new System.Windows.Forms.Button();
+            this.consumePerFight = new System.Windows.Forms.Button();
+            this.amountOrePer1MBt = new System.Windows.Forms.Button();
+            this.framesLimit = new System.Windows.Forms.Button();
+            this.collectVolume = new System.Windows.Forms.Button();
+            this.ore = new System.Windows.Forms.Button();
+            this.energy = new System.Windows.Forms.Button();
+            this.damage = new System.Windows.Forms.Button();
+            this.strength = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
+            this.modifyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.modulesPanel.SuspendLayout();
             this.SuspendLayout();
@@ -75,155 +74,195 @@ namespace PlariumArcade
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // modulesPanel
             // 
             this.modulesPanel.BackColor = System.Drawing.Color.Transparent;
-            this.modulesPanel.Controls.Add(this.button14);
-            this.modulesPanel.Controls.Add(this.button13);
-            this.modulesPanel.Controls.Add(this.button12);
-            this.modulesPanel.Controls.Add(this.button11);
-            this.modulesPanel.Controls.Add(this.button10);
-            this.modulesPanel.Controls.Add(this.button9);
-            this.modulesPanel.Controls.Add(this.button8);
-            this.modulesPanel.Controls.Add(this.button7);
-            this.modulesPanel.Controls.Add(this.button6);
-            this.modulesPanel.Controls.Add(this.button5);
-            this.modulesPanel.Controls.Add(this.button4);
-            this.modulesPanel.Controls.Add(this.button3);
-            this.modulesPanel.Controls.Add(this.button2);
-            this.modulesPanel.Controls.Add(this.button1);
-            this.modulesPanel.Location = new System.Drawing.Point(406, 0);
+            this.modulesPanel.Controls.Add(this.efficiency);
+            this.modulesPanel.Controls.Add(this.amountMBtPer100km);
+            this.modulesPanel.Controls.Add(this.consumePer100km);
+            this.modulesPanel.Controls.Add(this.consumePerFight);
+            this.modulesPanel.Controls.Add(this.amountOrePer1MBt);
+            this.modulesPanel.Controls.Add(this.framesLimit);
+            this.modulesPanel.Controls.Add(this.collectVolume);
+            this.modulesPanel.Controls.Add(this.ore);
+            this.modulesPanel.Controls.Add(this.energy);
+            this.modulesPanel.Controls.Add(this.damage);
+            this.modulesPanel.Controls.Add(this.strength);
+            this.modulesPanel.Location = new System.Drawing.Point(406, 43);
             this.modulesPanel.Name = "modulesPanel";
-            this.modulesPanel.Size = new System.Drawing.Size(283, 408);
+            this.modulesPanel.Size = new System.Drawing.Size(283, 316);
             this.modulesPanel.TabIndex = 2;
             // 
-            // button1
+            // efficiency
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.efficiency.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.efficiency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.efficiency.ForeColor = System.Drawing.SystemColors.Control;
+            this.efficiency.Location = new System.Drawing.Point(3, 291);
+            this.efficiency.Name = "efficiency";
+            this.efficiency.Size = new System.Drawing.Size(274, 23);
+            this.efficiency.TabIndex = 13;
+            this.efficiency.Text = "Efficiency:";
+            this.efficiency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.efficiency.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // amountMBtPer100km
             // 
-            this.button2.Location = new System.Drawing.Point(3, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(274, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.amountMBtPer100km.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.amountMBtPer100km.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.amountMBtPer100km.ForeColor = System.Drawing.SystemColors.Control;
+            this.amountMBtPer100km.Location = new System.Drawing.Point(3, 262);
+            this.amountMBtPer100km.Name = "amountMBtPer100km";
+            this.amountMBtPer100km.Size = new System.Drawing.Size(274, 23);
+            this.amountMBtPer100km.TabIndex = 12;
+            this.amountMBtPer100km.Text = "AmountMBtPer100km:";
+            this.amountMBtPer100km.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.amountMBtPer100km.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // consumePer100km
             // 
-            this.button3.Location = new System.Drawing.Point(3, 61);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(274, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.consumePer100km.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.consumePer100km.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.consumePer100km.ForeColor = System.Drawing.SystemColors.Control;
+            this.consumePer100km.Location = new System.Drawing.Point(3, 233);
+            this.consumePer100km.Name = "consumePer100km";
+            this.consumePer100km.Size = new System.Drawing.Size(274, 23);
+            this.consumePer100km.TabIndex = 11;
+            this.consumePer100km.Text = "ConsumePer100km:";
+            this.consumePer100km.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.consumePer100km.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // consumePerFight
             // 
-            this.button4.Location = new System.Drawing.Point(3, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(274, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.consumePerFight.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.consumePerFight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.consumePerFight.ForeColor = System.Drawing.SystemColors.Control;
+            this.consumePerFight.Location = new System.Drawing.Point(3, 204);
+            this.consumePerFight.Name = "consumePerFight";
+            this.consumePerFight.Size = new System.Drawing.Size(274, 23);
+            this.consumePerFight.TabIndex = 10;
+            this.consumePerFight.Text = "ConsumePerFight:";
+            this.consumePerFight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.consumePerFight.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // amountOrePer1MBt
             // 
-            this.button5.Location = new System.Drawing.Point(3, 119);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(274, 23);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.amountOrePer1MBt.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.amountOrePer1MBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.amountOrePer1MBt.ForeColor = System.Drawing.SystemColors.Control;
+            this.amountOrePer1MBt.Location = new System.Drawing.Point(3, 175);
+            this.amountOrePer1MBt.Name = "amountOrePer1MBt";
+            this.amountOrePer1MBt.Size = new System.Drawing.Size(274, 23);
+            this.amountOrePer1MBt.TabIndex = 9;
+            this.amountOrePer1MBt.Text = "AmountOrePer1MBt:";
+            this.amountOrePer1MBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.amountOrePer1MBt.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // framesLimit
             // 
-            this.button6.Location = new System.Drawing.Point(3, 146);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(274, 23);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.framesLimit.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.framesLimit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.framesLimit.ForeColor = System.Drawing.SystemColors.Control;
+            this.framesLimit.Location = new System.Drawing.Point(3, 146);
+            this.framesLimit.Name = "framesLimit";
+            this.framesLimit.Size = new System.Drawing.Size(274, 23);
+            this.framesLimit.TabIndex = 8;
+            this.framesLimit.Text = "FramesLimit:";
+            this.framesLimit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.framesLimit.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // collectVolume
             // 
-            this.button7.Location = new System.Drawing.Point(3, 175);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(274, 23);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.collectVolume.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.collectVolume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.collectVolume.ForeColor = System.Drawing.SystemColors.Control;
+            this.collectVolume.Location = new System.Drawing.Point(3, 119);
+            this.collectVolume.Name = "collectVolume";
+            this.collectVolume.Size = new System.Drawing.Size(274, 23);
+            this.collectVolume.TabIndex = 7;
+            this.collectVolume.Text = "CollectVolume:";
+            this.collectVolume.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.collectVolume.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // ore
             // 
-            this.button8.Location = new System.Drawing.Point(3, 204);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(274, 23);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.ore.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.ore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ore.ForeColor = System.Drawing.SystemColors.Control;
+            this.ore.Location = new System.Drawing.Point(3, 90);
+            this.ore.Name = "ore";
+            this.ore.Size = new System.Drawing.Size(274, 23);
+            this.ore.TabIndex = 6;
+            this.ore.Text = "Ore:";
+            this.ore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ore.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // energy
             // 
-            this.button9.Location = new System.Drawing.Point(3, 233);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(274, 23);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.energy.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.energy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.energy.ForeColor = System.Drawing.SystemColors.Control;
+            this.energy.Location = new System.Drawing.Point(3, 61);
+            this.energy.Name = "energy";
+            this.energy.Size = new System.Drawing.Size(274, 23);
+            this.energy.TabIndex = 5;
+            this.energy.Text = "Energy:";
+            this.energy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.energy.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // damage
             // 
-            this.button10.Location = new System.Drawing.Point(3, 262);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(274, 23);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.damage.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.damage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.damage.ForeColor = System.Drawing.SystemColors.Control;
+            this.damage.Location = new System.Drawing.Point(3, 32);
+            this.damage.Name = "damage";
+            this.damage.Size = new System.Drawing.Size(274, 23);
+            this.damage.TabIndex = 4;
+            this.damage.Text = "Damage:";
+            this.damage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.damage.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // strength
             // 
-            this.button11.Location = new System.Drawing.Point(3, 291);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(274, 23);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.strength.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.strength.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.strength.ForeColor = System.Drawing.SystemColors.Control;
+            this.strength.Location = new System.Drawing.Point(3, 3);
+            this.strength.Name = "strength";
+            this.strength.Size = new System.Drawing.Size(274, 23);
+            this.strength.TabIndex = 3;
+            this.strength.Text = "Strength :";
+            this.strength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.strength.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // exit
             // 
-            this.button12.Location = new System.Drawing.Point(3, 320);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(274, 23);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.exit.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit.ForeColor = System.Drawing.SystemColors.Control;
+            this.exit.Location = new System.Drawing.Point(545, 435);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(144, 33);
+            this.exit.TabIndex = 17;
+            this.exit.Text = "Exit ship";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // button13
+            // modifyButton
             // 
-            this.button13.Location = new System.Drawing.Point(3, 349);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(274, 23);
-            this.button13.TabIndex = 15;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(3, 378);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(274, 23);
-            this.button14.TabIndex = 16;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            this.modifyButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.modifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.modifyButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.modifyButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.modifyButton.Location = new System.Drawing.Point(22, 435);
+            this.modifyButton.Name = "modifyButton";
+            this.modifyButton.Size = new System.Drawing.Size(144, 33);
+            this.modifyButton.TabIndex = 18;
+            this.modifyButton.Text = "Modify ship";
+            this.modifyButton.UseVisualStyleBackColor = false;
             // 
             // ShipModulesMenu
             // 
@@ -231,6 +270,8 @@ namespace PlariumArcade
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlariumArcade.Properties.Resources.backgroundMenu;
             this.ClientSize = new System.Drawing.Size(720, 480);
+            this.Controls.Add(this.modifyButton);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.modulesPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
@@ -249,20 +290,19 @@ namespace PlariumArcade
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Panel modulesPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button strength;
         private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button efficiency;
+        private System.Windows.Forms.Button amountMBtPer100km;
+        private System.Windows.Forms.Button consumePer100km;
+        private System.Windows.Forms.Button consumePerFight;
+        private System.Windows.Forms.Button amountOrePer1MBt;
+        private System.Windows.Forms.Button framesLimit;
+        private System.Windows.Forms.Button collectVolume;
+        private System.Windows.Forms.Button ore;
+        private System.Windows.Forms.Button energy;
+        private System.Windows.Forms.Button damage;
+        private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button modifyButton;
     }
 }

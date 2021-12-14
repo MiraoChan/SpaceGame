@@ -85,16 +85,9 @@ namespace PlariumArcade
         #endregion
 
         public MainGameScreen()
-        {
-          
+        {         
             InitializeComponent();
-
             Controller = new GameController(this);
-         
-           // this.Show();
-            Console.WriteLine("");
-
-
         }
 
         private void exitButton_Click(object sender, EventArgs e)

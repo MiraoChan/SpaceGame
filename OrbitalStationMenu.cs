@@ -21,19 +21,17 @@ namespace PlariumArcade
         public OrbitalStationMenu(MainGameScreen screen)
         {
             Screen = screen;
+            Screen.Enabled = false;
             InitializeComponent();
             this.Show();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            Screen.Enabled = true;
             this.Close();
             this.Dispose();
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-           
-        }
+    
     }
 }

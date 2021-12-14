@@ -1,4 +1,7 @@
-﻿namespace PlariumTestGame.Model.Entities.ShipModules
+﻿using System.Linq;
+using PlariumArcade.Model.DL;
+
+namespace PlariumTestGame.Model.Entities.ShipModules
 {
     /// <summary>
     /// Class of generator module.
@@ -20,6 +23,7 @@
                         Price = 250;
                         Durability = 5;
                         AmountMBtPer100km = 2;
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 2:
@@ -27,6 +31,7 @@
                         Price = 388;
                         Durability = 8;
                         AmountMBtPer100km = 4;
+                        Tile = MediaData.ImageModules2lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 3:
@@ -34,6 +39,7 @@
                         Price = 547;
                         Durability = 10;
                         AmountMBtPer100km = 6;
+                        Tile = MediaData.ImageModules3lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
 
@@ -44,6 +50,7 @@
         public Generator(int level) : base(level)
         {
             Level = level;
+            PropertiesChange();
         }
     }
 }

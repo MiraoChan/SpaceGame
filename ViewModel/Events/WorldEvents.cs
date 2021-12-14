@@ -54,6 +54,7 @@ namespace PlariumArcade.ViewModel.Events
             DialogResult dialogResult = MessageBox.Show("Do you want to enter orbital station?", "Orbital station", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                
                 OrbitalStationMenu menu = new OrbitalStationMenu(Screen);
                 menu.Show();            
             }

@@ -95,9 +95,14 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         {
             Subscribers = new List<IViewSubscriber>();
             shipModules = new ShipModule[40, 40];
-
-         
-            this.cryptocurrency = cryptocurrency;
+            shipModules[5, 5] = new Frame(1);
+            shipModules[6, 5] = new Engine(1);
+            shipModules[4, 5] = new CommandCenter(1);
+            shipModules[5, 4] = new Accumulator(1);
+            shipModules[5, 3] = new Collector(1);
+            shipModules[5, 2] = new Storage(1);
+            shipModules[5, 1] = new Gun(1);
+      this.cryptocurrency = cryptocurrency;
             this.energy = energy;
             maxStrength = 0;
             strength = 0;

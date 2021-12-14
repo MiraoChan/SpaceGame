@@ -23,7 +23,8 @@ namespace PlariumArcade.ViewModel.Initialization
         }
 
         public void OpenShipModules() {
-            _ = new ShipModulesMenu(Screen);
+            ModulesDrawingController.DrawModules(gameController.ModulesMenu);
+            gameController.ModulesMenu.Show();
 
         }
 

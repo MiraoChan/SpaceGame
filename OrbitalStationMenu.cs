@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlariumArcade.Model.Actions;
+using PlariumArcade.ViewModel.Events;
 
 namespace PlariumArcade
 {
@@ -32,6 +34,30 @@ namespace PlariumArcade
             this.Close();
             this.Dispose();
         }
-    
+
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+         
+            if (new ActionController().BuyEnergy(energyAmount.Text, false))
+            {
+                MessageBox.Show("Purchase was successful.", "Buy energy", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Purchase was failed.", "Buy energy", MessageBoxButtons.OK);
+            }
+        }
+
+        private void sellButton_Click(object sender, EventArgs e)
+        {
+            if (new ActionController().SellOre(oreAmount.Text, false))
+            {
+                MessageBox.Show("Sale was successful.", "Sell ore", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Sale was failed.", "Sell ore", MessageBoxButtons.OK);
+            }
+        }
     }
 }

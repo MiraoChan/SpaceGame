@@ -35,8 +35,8 @@ namespace PlariumArcade
             this.energyAmount = new System.Windows.Forms.TextBox();
             this.oreAmount = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.sellButton = new System.Windows.Forms.Button();
+            this.buyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -81,6 +81,8 @@ namespace PlariumArcade
             this.oreAmount.Name = "oreAmount";
             this.oreAmount.Size = new System.Drawing.Size(144, 20);
             this.oreAmount.TabIndex = 5;
+            this.oreAmount.Text = "Amount";
+            this.oreAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // exitButton
             // 
@@ -96,40 +98,42 @@ namespace PlariumArcade
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // button5
+            // sellButton
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Consolas", 12F);
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(269, 173);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 33);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "S E L L";
-            this.button5.UseVisualStyleBackColor = false;
+            this.sellButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.sellButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sellButton.Font = new System.Drawing.Font("Consolas", 12F);
+            this.sellButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.sellButton.Location = new System.Drawing.Point(269, 173);
+            this.sellButton.Name = "sellButton";
+            this.sellButton.Size = new System.Drawing.Size(144, 33);
+            this.sellButton.TabIndex = 7;
+            this.sellButton.Text = "S E L L";
+            this.sellButton.UseVisualStyleBackColor = false;
+            this.sellButton.Click += new System.EventHandler(this.sellButton_Click);
             // 
-            // button6
+            // buyButton
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Consolas", 12F);
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(43, 173);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(144, 33);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "B U Y";
-            this.button6.UseVisualStyleBackColor = false;
+            this.buyButton.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.buyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buyButton.Font = new System.Drawing.Font("Consolas", 12F);
+            this.buyButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.buyButton.Location = new System.Drawing.Point(43, 173);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(144, 33);
+            this.buyButton.TabIndex = 8;
+            this.buyButton.Text = "B U Y";
+            this.buyButton.UseVisualStyleBackColor = false;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
             // OrbitalStationMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlariumArcade.Properties.Resources.backgroundMenu;
-            this.ClientSize = new System.Drawing.Size(464, 281);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(460, 280);
+            this.Controls.Add(this.buyButton);
+            this.Controls.Add(this.sellButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.oreAmount);
             this.Controls.Add(this.energyAmount);
@@ -152,7 +156,7 @@ namespace PlariumArcade
         private System.Windows.Forms.TextBox energyAmount;
         private System.Windows.Forms.TextBox oreAmount;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button sellButton;
+        private System.Windows.Forms.Button buyButton;
     }
 }

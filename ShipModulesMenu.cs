@@ -31,82 +31,69 @@ namespace PlariumArcade
 
         public void SetStrength(int val, int val1)
         {
-            Strength.Text = SetValue(Strength.Text, val,val1);
+            Strength.Text ="Strength : "+ val+"/"+val1;
             Strength.Refresh();
        
         }
         public void SetDamage(int val)
         {
-            Damage.Text = SetValue(Damage.Text, val);
+            Damage.Text ="Damage : " + val;
             Damage.Refresh();
 
         }
         public void SetEnergy(int val, int val1)
         {
-            Energy.Text = SetValue(Energy.Text, val,val1);
+            Energy.Text = " Energy : " + val + "/" + val1;
             Energy.Refresh();
 
         }
         public void SetOre(int val, int val1)
         {
-            Ore.Text = SetValue(Ore.Text, val,val1);
+            Ore.Text = "Ore : " + val + "/" + val1; 
             Ore.Refresh();
 
         }
         public void SetCollectVolume(int val)
         {
-            CollectVolume.Text = SetValue(CollectVolume.Text, val);
+            CollectVolume.Text = "Collect volume : " + val ;
             CollectVolume.Refresh();
 
         }
         public void SetFramesLimit(int val)
         {
-            FramesLimit.Text = SetValue(FramesLimit.Text, val);
+            FramesLimit.Text = "Frames limit : " + val;
             FramesLimit.Refresh();
 
         }
         public void SetAmountOrePer1MBt(int val)
         {
-            AmountOrePer1MBt.Text = SetValue(AmountOrePer1MBt.Text, val);
+            AmountOrePer1MBt.Text = "Amount ore per 1 MBt : " + val;
             AmountOrePer1MBt.Refresh();
 
         }
         public void SetConsumePerFight(int val)
         {
-            ConsumePerFight.Text = SetValue(ConsumePerFight.Text, val);
+            ConsumePerFight.Text = "Consume per fight : " + val;
             ConsumePerFight.Refresh();
 
         }
         public void SetConsumePer100km(int val)
         {
-            ConsumePer100km.Text = SetValue(ConsumePer100km.Text, val);
+            ConsumePer100km.Text = "Consume per 100 km : " + val;
             ConsumePer100km.Refresh();
 
         }
         public void SetAmountMBtPer100km(int val)
         {
-            AmountMBtPer100km.Text = SetValue(AmountMBtPer100km.Text, val);
+            AmountMBtPer100km.Text = "Amount MBt per 100 km : " + val;
             AmountMBtPer100km.Refresh();
 
         }
         public void SetEfficiency(int val)
         {
-            Efficiency.Text = SetValue(Efficiency.Text, val);
+            Efficiency.Text = "Efficiency : " + val;
             Efficiency.Refresh();
 
-        }
-
-        private string SetValue(string str, int val)
-        {
-            string[] subStr = str.Split(':');
-            string newStr = subStr[0] + val;
-            return newStr;
-        }
-        private string SetValue(string str, int val, int val1)
-        {
-            string[] subStr = str.Split(':');
-            string newStr = subStr[0] + val + "/" + val1;
-            return newStr;
         }
 
         #endregion

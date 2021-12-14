@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlariumArcade.Model.DataControllers;
 using PlariumArcade.Model.DB;
 using PlariumArcade.Model.Entities.Generators;
 using PlariumArcade.Model.Interfaces;
@@ -27,8 +28,8 @@ namespace PlariumArcade.ViewModel.Initialization
         public void RenewInfo()
         {
             Screen.SetMoneyStat(WorldData.Spaceship.Cryptocurrency);
-            Screen.SetOreStat(WorldData.Spaceship.Ore);
-            Screen.SetMVtStat(WorldData.Spaceship.Energy);
+            Screen.SetOreStat(WorldData.Spaceship.Ore, WorldData.Spaceship.OreLimit);
+            Screen.SetMVtStat(WorldData.Spaceship.Energy, WorldData.Spaceship.LimitEnergy);
             Screen.SetDamageStat(WorldData.Spaceship.Damage);
             Screen.SetStrengthStat(WorldData.Spaceship.Strength, WorldData.Spaceship.MaxStrength);
         }
@@ -55,18 +56,22 @@ namespace PlariumArcade.ViewModel.Initialization
             Screen = screen;
             ModulesMenu = new ShipModulesMenu(Screen);
             WorldData = new WorldData();
-          
+           
             //Генерация мира
-            WorldData.Spaceship = new Spaceship(cryptocurrency: 2500, energy: 5000000);
+            WorldData.Spaceship = new Spaceship(cryptocurrency: 2500, energy: 500000);
+            new ModulesController().RefreshShipData();
+            WorldData.Spaceship.Strength = WorldData.Spaceship.MaxStrength;
             WorldData.Spaceship.Subscribers.Add(this);
             GenerateNewWorld();
                       
            
             //отображение графики
-            RenewInfo();
-            RenewModulesInfo();
+            RenewInfo();          
+            RenewModulesInfo();       
             ShowGraphics();
             ShowModulesGraphics();
+
+
 
             //Подключение контроллеров
             EvController = new EventsController(this, Screen);

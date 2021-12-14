@@ -32,8 +32,8 @@ namespace PlariumArcade.Model.Entities.Generators
             if (!empty) { throw new ArgumentException("World is full"); }
             while (true) 
             {
-                int randX = new Random().Next(8);
-                int randY = new Random().Next(5);
+                int randX = new Random().Next(1,8);
+                int randY = new Random().Next(1,5);
                 if (WorldData.WorldMap[randX, randY] == null)
                 {                 
                     return new Point(randX, randY);
@@ -72,7 +72,11 @@ namespace PlariumArcade.Model.Entities.Generators
             
         }
 
-        public void GenerateNewObjects(ITileAble tileAble) { }
+        public void GenerateAsteroid() {
+            Point point= PointGenerator();
+            WorldData.WorldMap[point.X, point.Y] = new Asteroid(ImageGenerator(MediaData.ImageAsteroid));
+
+        }
         public void DeleteWorldObject() { }
 
     }

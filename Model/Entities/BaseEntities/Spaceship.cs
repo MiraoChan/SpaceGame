@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using PlariumArcade.Model.DataControllers;
 using PlariumArcade.Model.Entities.BaseEntities;
 using PlariumArcade.Model.Interfaces;
 using PlariumTestGame.Model.Entities.ShipModules;
@@ -26,7 +27,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         private ShipModule[,] shipModules;
         private Point coordinates;
         private Image tile;
-        private int cryptocurrency;
+        private double cryptocurrency;
 
         #region ModulesFields
 
@@ -70,7 +71,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
 
         #endregion
 
-        public int Cryptocurrency { get { return cryptocurrency; } set { cryptocurrency = value; NotifyParamChanges(); } }
+        public double Cryptocurrency { get { return cryptocurrency; } set { cryptocurrency = value; NotifyParamChanges(); } }
         public ShipModule[,] ShipModules { get { return shipModules; } set { shipModules = value; } }
         public Point Coordinates { get { return coordinates; } set { coordinates = value; } }
         public Image Tile { get { return tile; } set { tile = value; } }
@@ -91,7 +92,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         }
         #endregion
 
-        public Spaceship(int cryptocurrency, int energy) 
+        public Spaceship(double cryptocurrency, int energy) 
         {
             Subscribers = new List<IViewSubscriber>();
             shipModules = new ShipModule[40, 40];
@@ -102,13 +103,12 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
             shipModules[5, 3] = new Collector(1);
             shipModules[5, 2] = new Storage(1);
             shipModules[5, 1] = new Gun(1);
-      this.cryptocurrency = cryptocurrency;
+            shipModules[5, 6] = new Gun(1);
+            
+            this.cryptocurrency = cryptocurrency;
             this.energy = energy;
-            maxStrength = 0;
-            strength = 0;
-            damage = 0;
-            ore = 0;
             coordinates = new Point(3,3);
+            
             tile = Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/SpaceShip.png");
         }
     }

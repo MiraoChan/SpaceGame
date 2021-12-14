@@ -29,45 +29,33 @@ namespace PlariumArcade
         #endregion
 
         #region ValueSetters
-        public void SetMoneyStat(int val) 
+        public void SetMoneyStat(double val) 
         {
-            moneyStat.Text = SetValue(moneyStat.Text, val);
+            moneyStat.Text = "$ : " + val;
             moneyStat.Refresh();
             this.Show();
         }
-        public void SetOreStat(int val)
+        public void SetOreStat(int val,int val1)
         {
-            oreStat.Text = SetValue(oreStat.Text, val);
+            oreStat.Text = "Ore : "+val+"/"+val1;           
             this.Show();
         }
-        public void SetMVtStat(int val)
+        public void SetMVtStat(int val, int val1)
         {
-            mVtStat.Text = SetValue(mVtStat.Text, val);
+            mVtStat.Text = "MVt : " + val+"/"+val1;
             this.Show();
         }
         public void SetDamageStat(int val)
         {
-            damageStat.Text = SetValue(damageStat.Text, val);
+            damageStat.Text = "Damage : " + val;
             this.Show();
         }
         public void SetStrengthStat(int curStrenght,int maxStrenght)
         {
-            strengthStat.Text = SetValue(strengthStat.Text, curStrenght, maxStrenght);
+            strengthStat.Text = "Strength : " + curStrenght + "/" + maxStrenght;
             this.Show();
         }      
-        private string SetValue(string str,int val) 
-        { 
-            string[] subStr = str.Split(':');
-            string newStr = subStr[0] + val;
-            return newStr;
-        }
-        private string SetValue(string str, int val,int val1)
-        {
-            string[] subStr = str.Split(':');
-            string newStr = subStr[0] + val+"/"+val1;
-            return newStr;
-        }
-
+  
 
         #endregion
 

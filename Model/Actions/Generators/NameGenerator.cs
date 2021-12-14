@@ -14,11 +14,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         public static string GenerateName(object obj)
         {
             Random random = new Random();
-            if (obj is Planet)
-            {
-                return satellites[random.Next(satellites.Length)];
-            }
-            else if (obj is Asteroid)
+             if (obj is Asteroid)
             {
                 StringBuilder bld = new StringBuilder();
                 for (int i = 0; i < 8; i++)
@@ -27,6 +23,11 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
                 }
                 return bld.ToString();
             }
+            else if (obj is Planet)
+            {
+                return satellites[random.Next(satellites.Length)];
+            }
+            
             return "";
         }
     }

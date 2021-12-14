@@ -23,6 +23,7 @@ namespace PlariumArcade.Model.DataControllers
                     {
                         case "Accumulator":
                             {
+                              
                                 WorldData.Spaceship.LimitEnergy += ((Accumulator)module).LimitEnergy;
                                 WorldData.Spaceship.MaxStrength += ((Accumulator)module).Durability;
                                 break; 

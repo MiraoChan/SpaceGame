@@ -73,6 +73,16 @@ namespace PlariumArcade.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Attack {
+            get {
+                object obj = ResourceManager.GetObject("Attack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -136,6 +146,26 @@ namespace PlariumArcade.Properties {
         internal static System.Drawing.Bitmap backgroundMenu {
             get {
                 object obj = ResourceManager.GetObject("backgroundMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pirates {
+            get {
+                object obj = ResourceManager.GetObject("Pirates", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SpaceShip {
+            get {
+                object obj = ResourceManager.GetObject("SpaceShip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

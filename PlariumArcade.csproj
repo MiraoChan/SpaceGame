@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FightScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FightScreen.Designer.cs">
+      <DependentUpon>FightScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainGameScreen.cs">
       <SubType>Form</SubType>
@@ -62,7 +68,7 @@
     <Compile Include="MenuScreen.Designer.cs">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Actions\ShipModulesActions\AccumulatorAction.cs" />
+    <Compile Include="Model\Actions\ActionController.cs" />
     <Compile Include="Model\DataControllers\ModulesController.cs" />
     <Compile Include="Model\Data\MediaData.cs" />
     <Compile Include="Model\Data\WorldData.cs" />
@@ -107,6 +113,9 @@
     <Compile Include="ViewModel\Initialization\EventsController.cs" />
     <Compile Include="ViewModel\Initialization\FontInstaller.cs" />
     <Compile Include="ViewModel\Initialization\GameController.cs" />
+    <EmbeddedResource Include="FightScreen.resx">
+      <DependentUpon>FightScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainGameScreen.resx">
       <DependentUpon>MainGameScreen.cs</DependentUpon>
     </EmbeddedResource>

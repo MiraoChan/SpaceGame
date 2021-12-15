@@ -72,6 +72,7 @@
     <Compile Include="Model\DataControllers\ModulesController.cs" />
     <Compile Include="Model\Data\MediaData.cs" />
     <Compile Include="Model\Data\WorldData.cs" />
+    <Compile Include="Model\Entities\BaseEntities\Enemy.cs" />
     <Compile Include="Model\Entities\BaseEntities\orbitalStation.cs" />
     <Compile Include="Model\Actions\Generators\WorldObjectsGenerator.cs" />
     <Compile Include="Model\Interfaces\ITileAble.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="Model\Entities\ShipModules\Generator.cs" />
     <Compile Include="Model\Entities\ShipModules\Gun.cs" />
     <Compile Include="Model\Entities\ShipModules\Repairer.cs" />
-    <Compile Include="Model\Entities\ShipModules\ShipModule.cs" />
+    <Compile Include="Model\Entities\ShipModules\ShipModuleFactory.cs" />
     <Compile Include="Model\Entities\ShipModules\Storage.cs" />
     <Compile Include="Model\Interfaces\IViewSubscriber.cs" />
     <Compile Include="OrbitalStationMenu.cs">
@@ -106,6 +107,7 @@
     <Compile Include="ShipModulesMenu.Designer.cs">
       <DependentUpon>ShipModulesMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Events\FightEvent.cs" />
     <Compile Include="ViewModel\Events\WorldEvents.cs" />
     <Compile Include="ViewModel\GraphicControllers\MapDrawingController.cs" />
     <Compile Include="ViewModel\GraphicControllers\ModulesDrawingController.cs" />

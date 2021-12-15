@@ -12,6 +12,10 @@ namespace PlariumArcade
 {
     public partial class FightScreen : Form
     {
+        public PictureBox PirateAttack { get { return pirateAttack; }set { pirateAttack = value; } }
+        public PictureBox ShipAttack { get { return shipAttack; } set { shipAttack = value; } }
+        public ProgressBar ShipStrength { get { return shipStrength; } set { shipStrength = value; } }
+        public ProgressBar EnemyStrength { get { return enemyStrength; } set { enemyStrength = value; } }
         public FightScreen()
         {
             InitializeComponent();

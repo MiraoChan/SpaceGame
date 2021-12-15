@@ -7,7 +7,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of converter module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Converter : ShipModule
+    public sealed class Converter : ShipModuleFactory
     {
         public int AmountOrePer1MBt { get; set; }
 

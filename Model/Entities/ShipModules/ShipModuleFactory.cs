@@ -9,7 +9,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// <summary>
     /// Abstract model of basic ship module for futher inheritance
     /// </summary>
-    public abstract class ShipModule: ITileAble
+    public abstract class ShipModuleFactory: ITileAble
     {
         private int level;
 
@@ -39,7 +39,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
 
         public abstract void PropertiesChange();
 
-        protected ShipModule(int level)
+        protected ShipModuleFactory(int level)
         {
             Level = level;
 

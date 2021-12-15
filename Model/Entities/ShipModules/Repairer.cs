@@ -7,7 +7,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of repairer module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Repairer : ShipModule
+    public sealed class Repairer : ShipModuleFactory
     {
         public int Efficiency { get; set; }
 

@@ -9,7 +9,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of accumulator module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Accumulator : ShipModule
+    public sealed class Accumulator : ShipModuleFactory
     {
         private int limitEnergy;
 

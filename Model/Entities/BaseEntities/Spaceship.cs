@@ -24,7 +24,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
 
         #region Fields
 
-        private ShipModule[,] shipModules;
+        private ShipModuleFactory[,] shipModules;
         private Point coordinates;
         private Image tile;
         private double cryptocurrency;
@@ -72,7 +72,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         #endregion
 
         public double Cryptocurrency { get { return cryptocurrency; } set { cryptocurrency = value; NotifyParamChanges(); } }
-        public ShipModule[,] ShipModules { get { return shipModules; } set { shipModules = value; } }
+        public ShipModuleFactory[,] ShipModules { get { return shipModules; } set { shipModules = value; } }
         public Point Coordinates { get { return coordinates; } set { coordinates = value; } }
         public Image Tile { get { return tile; } set { tile = value; } }
         #endregion
@@ -95,7 +95,7 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         public Spaceship(double cryptocurrency, int energy) 
         {
             Subscribers = new List<IViewSubscriber>();
-            shipModules = new ShipModule[40, 40];
+            shipModules = new ShipModuleFactory[40, 40];
             shipModules[5, 5] = new Frame(1);
             shipModules[6, 5] = new Engine(1);
             shipModules[4, 5] = new CommandCenter(1);

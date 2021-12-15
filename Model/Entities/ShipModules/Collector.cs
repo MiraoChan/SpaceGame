@@ -7,7 +7,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of collector module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Collector : ShipModule
+    public sealed class Collector : ShipModuleFactory
     {
         public int CollectVolume { get; set; }
 

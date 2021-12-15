@@ -32,7 +32,7 @@ namespace PlariumArcade
             this.shipPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shipStrength = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.enemyStrength = new System.Windows.Forms.ProgressBar();
             this.shipAttack = new System.Windows.Forms.PictureBox();
             this.pirateAttack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.shipPicture)).BeginInit();
@@ -71,14 +71,14 @@ namespace PlariumArcade
             this.shipStrength.Size = new System.Drawing.Size(80, 23);
             this.shipStrength.TabIndex = 2;
             // 
-            // progressBar2
+            // enemyStrength
             // 
-            this.progressBar2.BackColor = System.Drawing.Color.Black;
-            this.progressBar2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.progressBar2.Location = new System.Drawing.Point(323, 184);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(80, 23);
-            this.progressBar2.TabIndex = 3;
+            this.enemyStrength.BackColor = System.Drawing.Color.Black;
+            this.enemyStrength.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.enemyStrength.Location = new System.Drawing.Point(323, 184);
+            this.enemyStrength.Name = "enemyStrength";
+            this.enemyStrength.Size = new System.Drawing.Size(80, 23);
+            this.enemyStrength.TabIndex = 3;
             // 
             // shipAttack
             // 
@@ -89,6 +89,7 @@ namespace PlariumArcade
             this.shipAttack.Size = new System.Drawing.Size(80, 80);
             this.shipAttack.TabIndex = 4;
             this.shipAttack.TabStop = false;
+            this.shipAttack.Visible = false;
             // 
             // pirateAttack
             // 
@@ -99,6 +100,7 @@ namespace PlariumArcade
             this.pirateAttack.Size = new System.Drawing.Size(80, 80);
             this.pirateAttack.TabIndex = 5;
             this.pirateAttack.TabStop = false;
+            this.pirateAttack.Visible = false;
             // 
             // FightScreen
             // 
@@ -108,12 +110,13 @@ namespace PlariumArcade
             this.ClientSize = new System.Drawing.Size(444, 241);
             this.Controls.Add(this.pirateAttack);
             this.Controls.Add(this.shipAttack);
-            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.enemyStrength);
             this.Controls.Add(this.shipStrength);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.shipPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FightScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FightScreen";
             ((System.ComponentModel.ISupportInitialize)(this.shipPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -128,7 +131,7 @@ namespace PlariumArcade
         private System.Windows.Forms.PictureBox shipPicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar shipStrength;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar enemyStrength;
         private System.Windows.Forms.PictureBox shipAttack;
         private System.Windows.Forms.PictureBox pirateAttack;
     }

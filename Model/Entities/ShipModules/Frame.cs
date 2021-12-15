@@ -7,7 +7,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of frame module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Frame : ShipModule
+    public sealed class Frame : ShipModuleFactory
     {
 
         /// <summary>

@@ -7,7 +7,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of storage module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Storage : ShipModule
+    public sealed class Storage : ShipModuleFactory
     {
         public int OreLimit { get; set; }
 

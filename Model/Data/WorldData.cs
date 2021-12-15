@@ -13,7 +13,7 @@ namespace PlariumArcade.Model.DB
     {
         public static ITileAble[,] WorldMap { get; set; } = new ITileAble[9, 6];
         public static Spaceship Spaceship { get; set; }
-        public static int CollectCounter { get; set; }
+        public static int WinsCounter { get; set; }
         /// <summary>
         /// Getting point of an object due to its position in matrix(map)
         /// If it don't find it, returns default point.
@@ -59,7 +59,7 @@ namespace PlariumArcade.Model.DB
                     WorldMap[x, y] = null;
                 }
             }
-            CollectCounter = 0;
+            WinsCounter = 0;
 
         }
     }

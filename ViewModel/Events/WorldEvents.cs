@@ -97,12 +97,18 @@ namespace PlariumArcade.ViewModel.Events
             }
         }
 
-        private void CheckOreCollecting(MainGameScreen Screen) {
-            WorldData.CollectCounter++;
-            if (new Random().Next(0, 100) <= 70 /*&& WorldData.CollectCounter==3*/) {
+        private void CheckOreCollecting(MainGameScreen Screen)
+        {
+
+            if (new Random().Next(0, 100) <= 40 ) 
+            {
+               _= new FightEvent();
+              
+            }
+            if (WorldData.WinsCounter == 3) {
                 new WorldObjectsGenerator().GenerateAsteroid();
                 Screen.Controller.ShowGraphics();
-               MessageBox.Show("Asteroid appeared", "Planet", MessageBoxButtons.OK);
+                MessageBox.Show("Asteroid appeared", "Planet", MessageBoxButtons.OK);
             }
         
         }

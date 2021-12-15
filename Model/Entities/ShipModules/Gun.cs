@@ -7,7 +7,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// Class of gun module.
     /// Inherits from model of basic ship module
     /// </summary>
-    public sealed class Gun : ShipModule
+    public sealed class Gun : ShipModuleFactory
     {
         public int Damage { get; set; }
 

@@ -10,6 +10,7 @@ using PlariumTestGame.Model.Entities.CoreEntities;
 
 namespace PlariumArcade.Model.Actions
 {
+
     class ActionController
     {
         public bool BuyEnergy(string amount,bool delivery) {

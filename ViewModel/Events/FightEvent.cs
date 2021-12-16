@@ -27,11 +27,11 @@ namespace PlariumArcade.ViewModel.Events
             Screen.EnemyStrength.Value = Enemy.MaxStrength;
             Screen.Refresh();
             #endregion
-            int numberFight=228;
-            string res = Directory.GetFiles("C:/Users/user/Desktop/SpaceGameRep/bin/Debug")                                 
-                                  .Last(t => t.Contains("log"));
-          
 
+            //Search for the last fight number
+            int numberFight;
+            string res = Directory.GetFiles("C:/Users/user/Desktop/SpaceGameRep/bin/Debug")                                 
+                                  .Last(t => t.Contains("log"));       
             if (res != null)
             {
                 var resInt = res.ToCharArray()

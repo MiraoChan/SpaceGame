@@ -60,6 +60,7 @@ namespace PlariumArcade
             this.pictureBox1.Size = new System.Drawing.Size(400, 400);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+
             // 
             // exitButton
             // 
@@ -279,6 +280,7 @@ namespace PlariumArcade
             this.Name = "ShipModulesMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShipModulesMenu";
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.modulesPanel.ResumeLayout(false);
             this.ResumeLayout(false);

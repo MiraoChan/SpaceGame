@@ -33,12 +33,13 @@ namespace PlariumArcade.ViewModel.GraphicControllers
         /// If a mismatch is found, replaces the element in the controller matrix
         /// </summary>
         /// <param name="screen">main game screen</param>
-        public static void ReDrawMap(MainGameScreen screen) {
+        public static void ReDrawMap()
+        {
             for (int x = 0; x < MapObjects.GetLength(0); ++x)
             {
                 for (int y = 0; y < MapObjects.GetLength(1); ++y)
                 {
-                    if (WorldData.WorldMap[x, y].Tile != MapObjects[x, y].Image) //mismatch is found
+                    if (MapObjects[x, y] != null && WorldData.WorldMap[x, y].Tile != MapObjects[x, y].Image)
                     {
                         MapObjects[x, y] = CreatePictureBox(WorldData.WorldMap[x, y].GetType().ToString().Split('.').Last(),
                                                                 WorldData.WorldMap[x, y].Tile,
@@ -77,5 +78,6 @@ namespace PlariumArcade.ViewModel.GraphicControllers
             };
           
         }
+
     }
 }

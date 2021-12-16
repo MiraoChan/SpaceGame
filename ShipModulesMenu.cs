@@ -7,12 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlariumArcade.Model.DB;
+using PlariumArcade.ViewModel.Events;
+using PlariumArcade.ViewModel.GraphicControllers;
+using PlariumArcade.ViewModel.Initialization;
 
 namespace PlariumArcade
 {
     public partial class ShipModulesMenu : Form
     {
         public MainGameScreen Screen { get; set; }
+        public GameController Controller { get; set; }
+
         #region Properties
         public Button Strength { get { return strength; } }
         public Button Damage { get { return damage; } }
@@ -98,8 +104,9 @@ namespace PlariumArcade
 
         #endregion
 
-        public ShipModulesMenu(MainGameScreen screen)
+        public ShipModulesMenu(MainGameScreen screen, GameController controller)
         {
+            Controller = controller;
             Screen = screen;
             InitializeComponent();
             this.Hide();
@@ -108,8 +115,12 @@ namespace PlariumArcade
 
 
         private void exit_Click(object sender, EventArgs e)
-        {
+        {         
             this.Hide();
         }
+
+     
+
+    
     }
 }

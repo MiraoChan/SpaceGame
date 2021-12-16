@@ -18,10 +18,12 @@ namespace PlariumArcade
         public MainGameScreen Screen { get; set; }
         public TextBox EnergyAmount { get { return energyAmount; } set { energyAmount = value; } }
         public TextBox OreAmount { get { return oreAmount; } set { oreAmount = value; } }
+        public bool Delivery { get; set; }
 
         #endregion
-        public OrbitalStationMenu(MainGameScreen screen)
+        public OrbitalStationMenu(MainGameScreen screen,bool delivery)
         {
+            Delivery = delivery;
             Screen = screen;
             Screen.Enabled = false;
             InitializeComponent();
@@ -38,7 +40,7 @@ namespace PlariumArcade
         private void buyButton_Click(object sender, EventArgs e)
         {
          
-            if (new ActionController().BuyEnergy(energyAmount.Text, false))
+            if (new ActionController().BuyEnergy(energyAmount.Text, Delivery))
             {
                 MessageBox.Show("Purchase was successful.", "Buy energy", MessageBoxButtons.OK);
             }
@@ -50,7 +52,7 @@ namespace PlariumArcade
 
         private void sellButton_Click(object sender, EventArgs e)
         {
-            if (new ActionController().SellOre(oreAmount.Text, false))
+            if (new ActionController().SellOre(oreAmount.Text, Delivery))
             {
                 MessageBox.Show("Sale was successful.", "Sell ore", MessageBoxButtons.OK);
             }

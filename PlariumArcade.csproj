@@ -108,6 +108,7 @@
       <DependentUpon>ShipModulesMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Events\FightEvent.cs" />
+    <Compile Include="ViewModel\Events\ModuleEvents.cs" />
     <Compile Include="ViewModel\Events\WorldEvents.cs" />
     <Compile Include="ViewModel\GraphicControllers\MapDrawingController.cs" />
     <Compile Include="ViewModel\GraphicControllers\ModulesDrawingController.cs" />

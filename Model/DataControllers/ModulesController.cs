@@ -16,6 +16,17 @@ namespace PlariumArcade.Model.DataControllers
         public ModulesController() { Ship = WorldData.Spaceship; }
         public void RefreshShipData() 
         {
+            WorldData.Spaceship.LimitEnergy = 0;
+            WorldData.Spaceship.MaxStrength = 0;
+            WorldData.Spaceship.CollectVolume = 0;
+            WorldData.Spaceship.FramesLimit =0;
+            WorldData.Spaceship.AmountOrePer1MBt = 0;
+            WorldData.Spaceship.ConsumePerFight =0;
+            WorldData.Spaceship.ConsumePer100km = 0;
+            WorldData.Spaceship.AmountMBtPer100km = 0;
+            WorldData.Spaceship.Damage = 0;
+            WorldData.Spaceship.Efficiency = 0;
+            WorldData.Spaceship.OreLimit = 0;
             foreach (var module in WorldData.Spaceship.ShipModules) 
             {
                 if (module != null) {

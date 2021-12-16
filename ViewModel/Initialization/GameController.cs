@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PlariumArcade.Model.DataControllers;
+﻿using PlariumArcade.Model.DataControllers;
 using PlariumArcade.Model.DB;
 using PlariumArcade.Model.Entities.Generators;
 using PlariumArcade.Model.Interfaces;
@@ -52,33 +45,31 @@ namespace PlariumArcade.ViewModel.Initialization
 
         public GameController(MainGameScreen screen) 
         {
-            //Загрузка данных
+            #region DataDownloading
             Screen = screen;
-            ModulesMenu = new ShipModulesMenu(Screen);
+            ModulesMenu = new ShipModulesMenu(Screen,this);
             WorldData = new WorldData();
-           
-            //Генерация мира
+            #endregion
+
+            #region WorldGeneration
             WorldData.Spaceship = new Spaceship(cryptocurrency: 2500, energy: 500000);
             new ModulesController().RefreshShipData();
             WorldData.Spaceship.Strength = WorldData.Spaceship.MaxStrength;
             WorldData.Spaceship.Subscribers.Add(this);
             GenerateNewWorld();
-                      
-           
-            //отображение графики
+            #endregion
+
+            #region SyncGraphics
             RenewInfo();          
             RenewModulesInfo();       
             ShowGraphics();
             ShowModulesGraphics();
+            #endregion
 
-
-
-            //Подключение контроллеров
-            EvController = new EventsController(this, Screen);
+            #region ControllersConnection
             new WorldEvents().CheckCollision(screen);
-
-            //Регулярное обновление контента
-
+            EvController = new EventsController(this, Screen);
+            #endregion
         }
         public void ShowModulesGraphics() {
             ModulesDrawingController.DrawModules(ModulesMenu);
@@ -87,14 +78,10 @@ namespace PlariumArcade.ViewModel.Initialization
             MapDrawingController.DrawMap(Screen);
             ShipDrawingController.DrawObject(Screen, image: WorldData.Spaceship.Tile, WorldData.Spaceship.Coordinates);
         }
-
         public void GenerateNewWorld()  
-        {
-            WorldData.WorldMap[4, 2] = new Planet(Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/Planet1.png"));
+        {        
             new WorldObjectsGenerator().GenerateNewWorld(amount_planets: 2,amount_asteroids: 0,amount_orbitalStation: 1);
         }
-
-
 
     }
 }

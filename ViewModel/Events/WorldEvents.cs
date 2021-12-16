@@ -91,7 +91,7 @@ namespace PlariumArcade.ViewModel.Events
             DialogResult dialogResult = MessageBox.Show("Do you want to enter orbital station?", "Orbital station", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {              
-                OrbitalStationMenu menu = new OrbitalStationMenu(Screen);
+                OrbitalStationMenu menu = new OrbitalStationMenu(Screen,false);
                 menu.Show();            
             }
         }
@@ -102,6 +102,7 @@ namespace PlariumArcade.ViewModel.Events
                _= new FightEvent();            
             }
             if (WorldData.WinsCounter == 3) {
+                WorldData.WinsCounter = 0;
                 new WorldObjectsGenerator().GenerateAsteroid();
                 Screen.Controller.ShowGraphics();
                 MessageBox.Show("Asteroid appeared", "Planet", MessageBoxButtons.OK);

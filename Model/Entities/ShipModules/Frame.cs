@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using PlariumArcade.Model.DL;
 
 namespace PlariumTestGame.Model.Entities.ShipModules
@@ -28,14 +29,14 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                     {
                         Price = 250;
                         Durability = 200;
-                        Tile = MediaData.ImageModules2lvl[this.GetType().ToString().Split('.').Last()];
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 3:
                     {
                         Price = 625;
                         Durability = 300;
-                        Tile = MediaData.ImageModules3lvl[this.GetType().ToString().Split('.').Last()];
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
 
@@ -43,8 +44,14 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                     break;
             }
         }
+        /// <summary>
+        /// Constructor. Initializes level and checks its correctness
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Throws when init level is wrong.</exception>
+        /// <param name="level">init level</param>
         public Frame(int level) : base(level)
         {
+            if (level > 3 || level < 1) throw new ArgumentException("wrong level data");
             Level = level;
             PropertiesChange();
         }

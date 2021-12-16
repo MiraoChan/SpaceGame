@@ -9,8 +9,14 @@ using PlariumArcade.Model.DB;
 
 namespace PlariumArcade.ViewModel.GraphicControllers
 {
+    /// <summary>
+    /// This class is responsible for drawing objects on the map
+    /// </summary>
     public static class MapDrawingController
     {
+        /// <summary>
+        /// Matrix of images of map objects
+        /// </summary>
         public static PictureBox[,] MapObjects { get; set; } = new PictureBox[6, 9];
         /// <summary>
         /// primary rendering of all map elements and adding controllers to the matrix
@@ -32,7 +38,6 @@ namespace PlariumArcade.ViewModel.GraphicControllers
         /// Checks the correspondence of elements in the matrix of controllers and in the matrix of world objects.
         /// If a mismatch is found, replaces the element in the controller matrix
         /// </summary>
-        /// <param name="screen">main game screen</param>
         public static void ReDrawMap()
         {
             for (int x = 0; x < MapObjects.GetLength(0); ++x)
@@ -64,11 +69,18 @@ namespace PlariumArcade.ViewModel.GraphicControllers
         /// <summary>
         /// Creates a new PictureBox due to world object
         /// </summary>
+        /// <param name="name">name of an object</param>
         /// <param name="image">object image</param>
         /// <param name="p">object location(point)</param>
+        /// <exception cref="System.ArgumentNullException">Throws when name is null</exception>
         /// <returns>new PictureBox</returns>
         public static PictureBox CreatePictureBox(String name,Image image, Point p) 
         {
+            if (name is null)
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+
             return new PictureBox
             {
                 Name = name,

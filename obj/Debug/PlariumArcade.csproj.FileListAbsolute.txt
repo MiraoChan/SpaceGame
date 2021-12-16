@@ -23,3 +23,4 @@ C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.csproj.AssemblyRefere
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.OrbitalStationMenu.resources
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.ShipModulesMenu.resources
 C:\Users\user\Desktop\SpaceGameRep\obj\Debug\PlariumArcade.FightScreen.resources
+C:\Users\user\Desktop\SpaceGameRep\bin\Debug\PlariumArcade.xml

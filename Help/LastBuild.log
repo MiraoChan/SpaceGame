@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2021.10.23.0" projectFile="C:\Users\user\Desktop\SpaceGameRep\GameManual.shfbproj" started="16.12.2021 10:14:11">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;E:\SandcastleHelpFileBuilder&#39;
+Searching for HTML Help 1 compiler...
+    Last step completed in 00:00:00,0000
+</buildStep>
+<buildStep step="Failed">
+
+SHFB: Error BE0037: Could not find the path to the HTML Help 1 compiler.  Is the HTML Help Workshop installed?  See the error number topic in the help file for details.
+
+   в SandcastleBuilder.Utils.BuildEngine.BuildProcess.FindTools()
+   в SandcastleBuilder.Utils.BuildEngine.BuildProcess.Build()
+
+</buildStep>
+</shfbBuild>

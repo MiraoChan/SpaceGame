@@ -10,11 +10,30 @@ using PlariumArcade.Model.Entities.BaseEntities;
 
 namespace PlariumArcade.ViewModel.Events
 {
+    /// <summary>
+    /// the class characterizes the event of a sudden battle with
+    /// the enemy when collecting ore from the planet.
+    /// It also logs all battle events into a separate file
+    /// </summary>
     public class FightEvent
     {
+        /// <summary>
+        /// Created enemy
+        /// </summary>
         public Enemy Enemy { get; set; }
+        /// <summary>
+        /// Result of the fight(lose\win)
+        /// </summary>
         public bool FightResult { get; set; }
+        /// <summary>
+        /// GUI of a fight
+        /// </summary>
         public FightScreen Screen { get; set; }
+
+        /// <summary>
+        /// Contains all the logic of the passage of the battle. 
+        /// If you win, it provides a reward, if you lose, it ends the game 
+        /// </summary>
         public FightEvent() {
 
             #region initialization
@@ -49,6 +68,7 @@ namespace PlariumArcade.ViewModel.Events
             {
                numberFight = 0;
             }
+            //Creates a new log file.
             using (StreamWriter writer = File.AppendText("log"+ (numberFight+1) + ".txt"))
             {
                 Log("Start fighting : ",writer);
@@ -71,6 +91,12 @@ namespace PlariumArcade.ViewModel.Events
             }
         }
 
+        /// <summary>
+        /// Loggs an attack of an object.
+        /// </summary>
+        /// <param name="fighter">Who fight</param>
+        /// <param name="damage">damage done</param>
+        /// <param name="writer">TextWriter</param>
         public void LogFight(string fighter,string damage, TextWriter writer)
         {
             writer.WriteLine(fighter+" attack -> ");
@@ -79,6 +105,11 @@ namespace PlariumArcade.ViewModel.Events
             writer.WriteLine($"Enemy strenght  : {this.Enemy.Strength}/{this.Enemy.MaxStrength}");
             writer.WriteLine("---------------");
         }
+        /// <summary>
+        /// Loggs a step of a fight.
+        /// </summary>
+        /// <param name="str">Step name</param>
+        /// <param name="writer">TextWriter</param>
         public void Log(string str, TextWriter writer)
         {
             writer.Write(str);
@@ -88,6 +119,9 @@ namespace PlariumArcade.ViewModel.Events
             writer.WriteLine($"Enemy damage:  {this.Enemy.Damage}");
             writer.WriteLine("---------------");
         }
+        /// <summary>
+        /// Adds a reward due to fight result 
+        /// </summary>
         public void CollectReward() 
         {
 
@@ -95,7 +129,8 @@ namespace PlariumArcade.ViewModel.Events
             {
                 WorldData.Spaceship.Ore += 1000;
             }
-            else
+            
+            else  //Not enough space for collect ore
             {
                 WorldData.Spaceship.Ore += WorldData.Spaceship.OreLimit - WorldData.Spaceship.Ore;
             }
@@ -108,6 +143,12 @@ namespace PlariumArcade.ViewModel.Events
                 WorldData.Spaceship.Energy += WorldData.Spaceship.LimitEnergy - WorldData.Spaceship.Energy;
             }
         }
+        /// <summary>
+        /// Main fight loop.Works with GUI and fight data simultaneously.
+        /// Pirates always attackes first.
+        /// </summary>
+        /// <param name="writer">StreamWriter</param>
+        /// <returns>result of a fight.</returns>
         public bool Fight(StreamWriter writer)
         {
             while (true)
@@ -120,6 +161,12 @@ namespace PlariumArcade.ViewModel.Events
                 Thread.Sleep(3000);
             }
          }
+        /// <summary>
+        /// Ship attack action. 
+        /// Lowers the opponent's health
+        /// </summary>
+        /// <returns>true if enemy is dead
+        /// false if he's still alive </returns>
         public bool ShipAttack() {
             Screen.PirateAttack.Hide();
             Screen.ShipAttack.Show();
@@ -138,6 +185,12 @@ namespace PlariumArcade.ViewModel.Events
             if (Enemy.Strength <= 0)return true;
             return false;
         }
+        /// <summary>
+        /// Enemy attack action. 
+        /// Lowers the opponent's health
+        /// </summary>
+        /// <returns>true if ship is alive
+        /// false if he's dead </returns>
         public bool EnemyAttack()
         {
             Screen.PirateAttack.Show();

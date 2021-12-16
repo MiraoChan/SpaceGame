@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace PlariumArcade.Model.Interfaces
 {
-   public interface IViewSubscriber
+    /// <summary>
+    /// An interface for implementing the observer pattern. 
+    /// Used to notify the ship about updating the values ​​of the GUI elements
+    /// </summary>
+    public interface IViewSubscriber
     {
-       void RenewInfo();
+        /// <summary>
+        /// Method of duty of renewal
+        /// </summary>
+        void RenewInfo();
     }
 }

@@ -1,0 +1,1480 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PlariumArcade</name>
+    </assembly>
+    <members>
+        <member name="T:PlariumArcade.FightScreen">
+            <summary>
+            This form is a display of the processes
+            of the battle between the player and the pirate
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.FightScreen.PirateAttack">
+            <summary>
+            Pirate attack display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.FightScreen.ShipAttack">
+            <summary>
+            Ship attack display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.FightScreen.ShipStrength">
+            <summary>
+            Value of Ship strength
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.FightScreen.EnemyStrength">
+            <summary>
+            Value of Enemy strength
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.FightScreen.#ctor">
+            <summary>
+            Constructor of a form.
+            </summary>
+        </member>
+        <member name="F:PlariumArcade.FightScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.FightScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PlariumArcade.FightScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.MainGameScreen">
+            <summary>
+            This form represents the display of 
+            the entire main playing field with
+            the ability to exit the game
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.MainGameScreen.Controller">
+            <summary>
+            Main game controller
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.MainGameScreen.MoneyStat">
+            <summary>
+            Cryptocurrency display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.MainGameScreen.OreStat">
+            <summary>
+            Ore display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.MainGameScreen.MVtStat">
+            <summary>
+            MVt display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.MainGameScreen.DamageStat">
+            <summary>
+            Damage display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.MainGameScreen.StrengthStat">
+            <summary>
+            Strength display
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.SetMoneyStat(System.Double)">
+            <summary>
+            Money display setter
+            </summary>
+            <param name="val">current value</param>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.SetOreStat(System.Int32,System.Int32)">
+            <summary>
+            Ore display setter
+            </summary>
+            <param name="val">currOre</param>
+            <param name="val1">MaxOre</param>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.SetMVtStat(System.Int32,System.Int32)">
+            <summary>
+            MVt display setter
+            </summary>
+            <param name="val">currenergy</param>
+            <param name="val1">maxEnergy</param>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.SetDamageStat(System.Int32)">
+            <summary>
+            Damage display setter
+            </summary>
+            <param name="val">current value</param>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.SetStrengthStat(System.Int32,System.Int32)">
+            <summary>
+            Strength display setter
+            </summary>
+            <param name="curStrenght">current value</param>
+             /// <param name="maxStrenght">max value</param>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.#ctor">
+            <summary>
+            Controller.Initialixes all graphic screen elements.
+            </summary>
+        </member>
+        <member name="F:PlariumArcade.MainGameScreen.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:PlariumArcade.MainGameScreen.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.MenuScreen">
+            <summary>
+            This form is a display of the game
+            menu with the ability to start the game
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.MenuScreen.#ctor">
+            <summary>
+            Form constructor
+            </summary>
+        </member>
+        <member name="F:PlariumArcade.MenuScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.MenuScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PlariumArcade.MenuScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.ChangeLocation">
+            <summary>
+            Change amount of energy according to consuming per 100km and changing 
+            location of a spaceship.
+            </summary>
+            <returns>false in a case of out of an energy
+             true in a case of a successful energy intake </returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.BuyEnergy(System.String,System.Boolean)">
+            <summary>
+            Implements the purchase of energy. The price is adjusted
+            depending on the amount of purchased energy and 
+            the availability of delivery.
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws in a case of illegal entered data</exception>
+            <param name="amount">amount of energy to buy</param>
+            <param name="delivery">availability of delivery</param>
+            <returns>true if the purchase was successfylly done.
+            false if there's not enough money for purchase 
+            or there's no place to keep bought energy.</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.Buy(System.Int32,System.Double)">
+            <summary>
+            Implements interaction with Ship data.
+            Takes away fixed amount of money for purchasing
+            Adds purchased energy.
+            </summary>
+            <param name="amount">amount of energy</param>
+            <param name="coefficient">purchasing coefficient</param>
+            <returns>true if the data change was successfylly done.
+            false if there's no place to keep bought energy.</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.SellOre(System.String)">
+            <summary>
+            Implements selling collected ore.The price is adjusted
+            depending on the amount of selling ore.
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws in a case of illegal entered data</exception>
+            <param name="amount">amount of selling ore.</param>
+            <returns>true if operation done successfully.</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.Sell(System.Int32,System.Double)">
+            <summary>
+            Implements interaction with Ship data.
+            Takes away fixed amount of ore for selling
+            Adds earned money.
+            </summary>
+            <param name="amount">amount of ore</param>
+            <param name="coefficient">purchasing coefficient</param>
+            <returns></returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.CollectOre">
+            <summary>
+            Collects ore from a planet
+            adds ore and takes away ship energy
+            </summary>
+            <returns>result of an action(success/failed)</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Actions.ActionController.CollectOre(PlariumTestGame.Model.Entities.CoreEntities.Asteroid)">
+            <summary>
+            collects ore from asteroid 
+            adds ore and tales away energy
+            takes away asteroid ore or deletes asteroid
+            </summary>
+            <param name="asteroid">current asteroid</param>
+            <returns>result of an action(success/failed)</returns>
+        </member>
+        <member name="T:PlariumArcade.Model.DataControllers.ModulesController">
+            <summary>
+            Class ModulesController implements
+            a deep synchronization modules data changes and 
+            all spaceship characteristic
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DataControllers.ModulesController.Ship">
+            <summary>
+            Owner of all modules.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.DataControllers.ModulesController.#ctor">
+            <summary>
+            Constructor.Initializes a spaceship
+            from WorldData.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.DataControllers.ModulesController.RefreshShipData">
+            <summary>
+            Changes all spaceship characteristics 
+            due to available characteristics in 
+            modules of various types.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Model.DL.MediaData">
+            <summary>
+            Class MediaData provides concise access
+            to media from code eliminating the need
+            to use file paths inside the main game logic.
+            Contains different lists of images depending on
+            the type of object
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Model.DB.WorldData">
+            <summary>
+            Class WorldData acts as a single in-game data 
+            store (map, counter and ship object) with
+            the ability to access from the ViewModel layer.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DB.WorldData.WorldMap">
+            <summary>
+            Game map which contains all game objects, excluding a spaceship.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DB.WorldData.Spaceship">
+            <summary>
+            Main game object. Plays the role of the main player
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DB.WorldData.WinsCounter">
+            <summary>
+            Counter of ship victories over pirates
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.DB.WorldData.GetPoint(PlariumArcade.Model.Entities.BaseEntities.ITileAble)">
+            <summary>
+            Getting point of an object due to its position in matrix(map)
+            If it don't find it, returns default point.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws when object is null</exception>
+            <param name="value">Needed object</param>
+            <returns>position of an obj</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.DB.WorldData.GetModulePoint(PlariumArcade.Model.Entities.BaseEntities.ITileAble)">
+            <summary>
+            Getting point of an object due to its position in 
+            ship module matrix inside a ship object. 
+            If it don't find it, returns default point.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws when object is null</exception>
+            <param name="value">needed module</param>
+            <returns>point of a needed module on a modules map.</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.DB.WorldData.#ctor">
+            <summary>
+            WorldData constructor. Initializes all game map with nulls and a counter.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Model.Entities.BaseEntities.Enemy">
+            <summary>
+            Enemy- one of the main objects in a game.
+            Characterized by Strength, MaxStrength and 
+            Damage. Attacks a ship in a case of fighting.
+            In a case of having 0 amount of strength 
+            deletes itself.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.BaseEntities.Enemy.#ctor">
+            <summary>
+            Constructor generates random strength netween 10 and 200
+            ans a random enemy damage.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Model.Entities.BaseEntities.OrbitalStation">
+            <summary>
+            OrbitalStation- one of the main objects in a game.
+            Characterized by Tile. Allows sell ore 
+            and buy energy on it.
+            Always appears in a middle of a world map.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.BaseEntities.OrbitalStation.Tile">
+            <summary>
+            Image of an orbital station
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.BaseEntities.OrbitalStation.#ctor(System.Drawing.Image)">
+            <summary>
+            Initializes a station image.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">throws if an image is null.</exception>
+            <param name="img">initial image</param>
+        </member>
+        <member name="T:PlariumArcade.Model.Entities.BaseEntities.ITileAble">
+            <summary>
+            interface for duty
+             be able to display the inherited
+             object in the graphical interface
+             using a picture
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.BaseEntities.ITileAble.Tile">
+            <summary>
+            object picture
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator">
+            <summary>
+            Class WorldObjectsGenerator is responsible for
+            generating objects on the game map based on the 
+            size of the map. Used for initial initialization
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.Xsize">
+            <summary>
+            Playing field length
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.Ysize">
+            <summary>
+            Playing field width
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.#ctor">
+            <summary>
+            Class constructor. Initializes the dimensions
+            of the map based on an existing map in the WorldData class
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.PointGenerator">
+            <summary>
+            Generates a point free of other objects on the map 
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when all possible points are full </exception>
+            <returns>A free point</returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.ImageGenerator(System.Collections.Generic.List{System.Drawing.Image})">
+            <summary>
+            Selects a random picture from the list
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws when initial list is null</exception>
+            <param name="img">random image</param>
+            <returns></returns>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.GenerateNewWorld(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Generate new objects onto a game map according to indicated parameters
+            (amount of each object )
+            </summary>
+            <remarks>There can be only one orbital station.</remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">Throws when one of parameters has an illegal value.</exception>
+            <param name="amount_planets">amount of planets to generate</param>
+            <param name="amount_asteroids">amount ofasteroids to generate</param>
+            <param name="amount_orbitalStation">amount of orbital stations to generate</param>
+        </member>
+        <member name="M:PlariumArcade.Model.Entities.Generators.WorldObjectsGenerator.GenerateAsteroid">
+            <summary>
+            Generates a new asteroid onto the map.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Model.Interfaces.IViewSubscriber">
+            <summary>
+            An interface for implementing the observer pattern. 
+            Used to notify the ship about updating the values ​​of the GUI elements
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.Model.Interfaces.IViewSubscriber.RenewInfo">
+            <summary>
+            Method of duty of renewal
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.OrbitalStationMenu">
+            <summary>
+            This form is a display of the operation of the 
+            orbital station with the ability to buy / sell resources
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.OrbitalStationMenu.Screen">
+            <summary>
+            Current game screen
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.OrbitalStationMenu.EnergyAmount">
+            <summary>
+            Energy input field
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.OrbitalStationMenu.OreAmount">
+            <summary>
+            Ore input field
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.OrbitalStationMenu.Delivery">
+            <summary>
+            Local flag for delivery
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.OrbitalStationMenu.#ctor(PlariumArcade.MainGameScreen,System.Boolean)">
+            <summary>
+            Constrictor.Initializes its components
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws if screen is null</exception>
+            <param name="screen">current screen</param>
+            <param name="delivery">delivery flag</param>
+        </member>
+        <member name="F:PlariumArcade.OrbitalStationMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.OrbitalStationMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PlariumArcade.OrbitalStationMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.ShipModulesMenu">
+            <summary>
+            This form is a display of the interior of the ship
+            with a representation of the location of the modules
+            and all characteristics
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Screen">
+            <summary>
+            Current screen
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Controller">
+            <summary>
+            Main game controller
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Strength">
+            <summary>
+            Strength display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Damage">
+            <summary>
+            Damage display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Energy">
+            <summary>
+            Energy display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Ore">
+            <summary>
+            Ore display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.CollectVolume">
+            <summary>
+            Collect volume display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.FramesLimit">
+            <summary>
+            Frames limit display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.AmountOrePer1MBt">
+            <summary>
+            AmountOrePer1MBt display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.ConsumePerFight">
+            <summary>
+             ConsumePerFight display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.ConsumePer100km">
+            <summary>
+             ConsumePer100km display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.AmountMBtPer100km">
+            <summary>
+             AmountMBtPer100km display
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ShipModulesMenu.Efficiency">
+            <summary>
+            Efficiency display
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetStrength(System.Int32,System.Int32)">
+            <summary>
+            Sets Strenght display value
+            </summary>
+            <param name="val">maxStr</param>
+            <param name="val1">minStr</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetDamage(System.Int32)">
+            <summary>
+            Sets Damage display value
+            </summary>
+            <param name="val">damage</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetEnergy(System.Int32,System.Int32)">
+            <summary>
+            Sets Energy display value
+            </summary>
+            <param name="val">currEnergy</param>
+            <param name="val1">maxEnergy</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetOre(System.Int32,System.Int32)">
+            <summary>
+            Sets Ore display value
+            </summary>
+            <param name="val">currOre</param>
+            <param name="val1">maxOre</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetCollectVolume(System.Int32)">
+            <summary>
+            Sets CollectVolume display value
+            </summary>
+            <param name="val">volume</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetFramesLimit(System.Int32)">
+            <summary>
+            Sets Frames limit display value
+            </summary>
+            <param name="val">maxframes</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetAmountOrePer1MBt(System.Int32)">
+            <summary>
+            Sets AmountOrePer1MBt display value
+            </summary>
+            <param name="val">amountOre</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetConsumePerFight(System.Int32)">
+            <summary>
+            Sets ConsumePerFight display value
+            </summary>
+            <param name="val">ConsumePerFight</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetConsumePer100km(System.Int32)">
+            <summary>
+            Sets ConsumePer100km display value
+            </summary>
+            <param name="val">ConsumePer100km</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetAmountMBtPer100km(System.Int32)">
+            <summary>
+            Sets AmountMBtPer100km display value
+            </summary>
+            <param name="val">AmountMBtPer100km</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.SetEfficiency(System.Int32)">
+            <summary>
+            Sets Efficiencydisplay value
+            </summary>
+            <param name="val">Efficiency</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.#ctor(PlariumArcade.MainGameScreen,PlariumArcade.ViewModel.Initialization.GameController)">
+            <summary>
+            Constructor.Initializes all form components.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws when one of params is null</exception>
+            <param name="screen"></param>
+            <param name="controller"></param>
+        </member>
+        <member name="F:PlariumArcade.ShipModulesMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PlariumArcade.ShipModulesMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.Events.FightEvent">
+            <summary>
+            the class characterizes the event of a sudden battle with
+            the enemy when collecting ore from the planet.
+            It also logs all battle events into a separate file
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Events.FightEvent.Enemy">
+            <summary>
+            Created enemy
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Events.FightEvent.FightResult">
+            <summary>
+            Result of the fight(lose\win)
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Events.FightEvent.Screen">
+            <summary>
+            GUI of a fight
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.#ctor">
+            <summary>
+            Contains all the logic of the passage of the battle. 
+            If you win, it provides a reward, if you lose, it ends the game 
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.LogFight(System.String,System.String,System.IO.TextWriter)">
+            <summary>
+            Loggs an attack of an object.
+            </summary>
+            <param name="fighter">Who fight</param>
+            <param name="damage">damage done</param>
+            <param name="writer">TextWriter</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.Log(System.String,System.IO.TextWriter)">
+            <summary>
+            Loggs a step of a fight.
+            </summary>
+            <param name="str">Step name</param>
+            <param name="writer">TextWriter</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.CollectReward">
+            <summary>
+            Adds a reward due to fight result 
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.Fight(System.IO.StreamWriter)">
+            <summary>
+            Main fight loop.Works with GUI and fight data simultaneously.
+            Pirates always attackes first.
+            </summary>
+            <param name="writer">StreamWriter</param>
+            <returns>result of a fight.</returns>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.ShipAttack">
+            <summary>
+            Ship attack action. 
+            Lowers the opponent's health
+            </summary>
+            <returns>true if enemy is dead
+            false if he's still alive </returns>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.FightEvent.EnemyAttack">
+            <summary>
+            Enemy attack action. 
+            Lowers the opponent's health
+            </summary>
+            <returns>true if ship is alive
+            false if he's dead </returns>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.Events.ModuleEvents">
+            <summary>
+            This class implements an increase in the level of 
+            a certain module with the subsequent update of the
+            characteristics of the ship and the GUI.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.ModuleEvents.UpdateLevel(System.Drawing.Point,PlariumArcade.ShipModulesMenu)">
+            <summary>
+            This method implements raising the module level,
+            checking the current level value and updating information.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws if screen is null</exception>
+            <param name="point">localization of the required module</param>
+            <param name="screen">current ShipModulesMenu screen</param>
+            <returns>result of increasing</returns>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.Events.WorldEvents">
+            <summary>
+            This class implements the interaction of
+            the ship with other objects in the world
+            in a collision.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.WorldEvents.CheckCollision(PlariumArcade.MainGameScreen)">
+            <summary>
+            This method implements checking the intersection 
+            of images of the ship and objects on the map with
+            a call to subsequent actions.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws if screen is null</exception>
+            <param name="Screen">current main game screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.WorldEvents.Asteroid_Action(PlariumArcade.MainGameScreen,System.Windows.Forms.PictureBox)">
+            <summary>
+            This method implements the collection of ore in
+            a collision with an asteroid. When collecting 
+            the maximum amount of aruda, the asteroid dies
+            </summary>
+            <param name="Screen">current screen</param>
+            <param name="box">current asteroid</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.WorldEvents.Planet_Action(PlariumArcade.MainGameScreen,System.Windows.Forms.PictureBox)">
+            <summary>
+            This method implements the collection of ore in
+            a collision with an asteroid.When collected, 
+            there is a chance to get into a battle with pirates
+            </summary>
+            <param name="Screen">current screen</param>
+            <param name="box">current planet</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.WorldEvents.OrbitalStation_Action(PlariumArcade.MainGameScreen)">
+            <summary>
+            This method implements interaction with the orbital 
+            station, that is, getting into the window for
+            buying / selling resources
+            </summary>
+            <param name="Screen">current screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Events.WorldEvents.CheckOreCollecting(PlariumArcade.MainGameScreen)">
+            <summary>
+            This class is responsible for the generation
+            of asteroids after three victories over pirates
+            with further cancellation of the counter
+            </summary>
+            <param name="Screen">current screen</param>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.GraphicControllers.MapDrawingController">
+            <summary>
+            This class is responsible for drawing objects on the map
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.GraphicControllers.MapDrawingController.MapObjects">
+            <summary>
+            Matrix of images of map objects
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.MapDrawingController.DrawMap(PlariumArcade.MainGameScreen)">
+            <summary>
+            primary rendering of all map elements and adding controllers to the matrix
+            </summary>
+            <param name="screen">main game screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.MapDrawingController.ReDrawMap">
+            <summary>
+            Checks the correspondence of elements in the matrix of controllers and in the matrix of world objects.
+            If a mismatch is found, replaces the element in the controller matrix
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.MapDrawingController.DrawObjects(PlariumArcade.MainGameScreen,System.Windows.Forms.PictureBox)">
+            <summary>
+            Adds controller to form and adjusts its position
+            </summary>
+            <param name="screen">main game screen</param>
+            <param name="pic">current PictureBox</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.MapDrawingController.CreatePictureBox(System.String,System.Drawing.Image,System.Drawing.Point)">
+            <summary>
+            Creates a new PictureBox due to world object
+            </summary>
+            <param name="name">name of an object</param>
+            <param name="image">object image</param>
+            <param name="p">object location(point)</param>
+            <exception cref="T:System.ArgumentNullException">Throws when name is null</exception>
+            <returns>new PictureBox</returns>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController">
+            <summary>
+            This class is responsible for updating \ rendering 
+            the graphical representation of the ship modules
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController.ModuleObjects">
+            <summary>
+            Matrix of images of ship modules
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController.Screen">
+            <summary>
+            Current modules menu screen
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController.DrawModules(PlariumArcade.ShipModulesMenu)">
+            <summary>
+            render modules of a ship on a ShipModulesMenu screen
+            </summary>
+            <param name="screen">main game screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController.ReDrawModule(PlariumArcade.ShipModulesMenu)">
+            <summary>
+            Checks the correspondence of elements in the matrix of ship modules and in the matrix of modules.
+            If a mismatch is found, replaces the element in the controller matrix
+            </summary>
+            <param name="screen">ship modules screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController.DrawModule(PlariumArcade.ShipModulesMenu,System.Windows.Forms.PictureBox)">
+            <summary>
+            Adds controller to form and adjusts its position
+            </summary>
+            <param name="screen">main game screen</param>
+            <param name="pic">current PictureBox</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.ModulesDrawingController.CreatePictureBox(System.String,System.Drawing.Image,System.Drawing.Point)">
+            <summary>
+            Creates a new PictureBox due to module
+            </summary>
+            <param name="name">name of a module</param>
+            <param name="image">object image</param>
+            <param name="p">object location(point)</param>
+            <returns>new PictureBox</returns>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.GraphicControllers.ShipDrawingController">
+            <summary>
+            This class is responsible for updating \ rendering 
+            the graphical representation of the spaceship
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.GraphicControllers.ShipDrawingController.Picture">
+            <summary>
+            Graphical representation of the ship on the map
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.ShipDrawingController.ReDrawObject(System.Drawing.Point)">
+            <summary>
+            Redraws the image of the ship in a different coordinate
+            </summary>
+            <param name="p">a different coordinate</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.GraphicControllers.ShipDrawingController.DrawObject(PlariumArcade.MainGameScreen,System.Drawing.Image,System.Drawing.Point)">
+            <summary>
+            This method creates a new graphical 
+            representation of the ship and displays 
+            it on the screen.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws when params are\is null</exception>
+            <param name="screen"></param>
+            <param name="image"></param>
+            <param name="p"></param>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.Initialization.EventsController">
+            <summary>
+            This class is responsible for the main actions 
+            on the map. Implements the movement of the ship on the map,
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.EventsController.GameController">
+            <summary>
+            Main game controller
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.EventsController.Screen">
+            <summary>
+            Game screen
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.EventsController.PictureData">
+            <summary>
+            Local flag
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.#ctor(PlariumArcade.ViewModel.Initialization.GameController,PlariumArcade.MainGameScreen)">
+            <summary>
+            Constructor. Initializes controller,screen and adds new events.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws if one of params is null</exception>
+            <param name="gameController">main game controller</param>
+            <param name="Screen">current screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.AddOrbitalStationAction">
+            <summary>
+            This method adds action to an orbital station
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.OrbitalStation_Click">
+            <summary>
+            Event of an orbital station clicking.Opens a station screen.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.OpenShipModules">
+            <summary>
+            Opens a ship modules menu.
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.GoLeft">
+            <summary>
+            Move a ship to the left cell in a world matrix. Renew all info. 
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.GoRight">
+            <summary>
+            Move a ship to the right cell in a world matrix. Renew all info. 
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.GoUp">
+            <summary>
+            Move a ship to the up cell in a world matrix. Renew all info. 
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.GoDown">
+            <summary>
+            Move a ship to the down cell in a world matrix. Renew all info. 
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.EventsController.CheckEnergy">
+            <summary>
+            Checks amount of a ship energy.If its end, it ends the game.
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.ViewModel.Initialization.GameController">
+            <summary>
+            the main class in the game.
+            It is created and starts its work when you start 
+            the main screen of the game. Conducts world generation,
+            data and GUI synchronization and creates a display of all elements
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.GameController.Screen">
+            <summary>
+            Main game screen
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.GameController.ModulesMenu">
+            <summary>
+            Screen of all ship modules
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.GameController.WorldData">
+            <summary>
+            Game data storage
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.ViewModel.Initialization.GameController.EvController">
+            <summary>
+            Controller of a big part of game events
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.GameController.RenewInfo">
+            <summary>
+            Update views due to player's data changes
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.GameController.RenewModulesInfo">
+            <summary>
+            Update modules views due to player's data changes
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.GameController.#ctor(PlariumArcade.MainGameScreen)">
+            <summary>
+            The main method of this class. Performs data loading,
+            world generation, graphics synchronization and 
+            connection of the required controllers
+            </summary>
+            <param name="screen">current game screen</param>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.GameController.ShowModulesGraphics">
+            <summary>
+            Draws modules on a modules screen
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.GameController.ShowGraphics">
+            <summary>
+            Draws all map object and a spaceship
+            </summary>
+        </member>
+        <member name="M:PlariumArcade.ViewModel.Initialization.GameController.GenerateNewWorld">
+            <summary>
+            Generates a new world according to the specified values
+            </summary>
+        </member>
+        <member name="T:PlariumArcade.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.Asteroid">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.Attack">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.background">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.background1">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.backgroundCell">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.backgroundCell1">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.backgroundCell2">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.backgroundCellModules">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.backgroundMenu">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.Pirates">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Properties.Resources.SpaceShip">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.CoreEntities.Asteroid">
+            <summary>
+            Asteroid- one of the main objects in a game.
+            Characterized by unique name, tile(image) and 
+            amount of ore. Allows dig an ore from it.
+            In a case of having 0 amount of ore
+            deletes itself.Inherits from a Planet.
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Asteroid.AmountOfOre">
+            <summary>
+            Amount of available ore to collect.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.CoreEntities.Asteroid.#ctor(System.Drawing.Image)">
+            <summary>
+            Constructor initialize an amount of ore
+            by a random value between 100 and 1000,
+            generates a random name and set an image.
+            </summary>
+            <param name="img">initial image</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.CoreEntities.NameGenerator">
+            <summary>
+            the generator class is used to
+            generate the names of asteroids and planets
+            according to satellite names and random names
+            </summary>
+        </member>
+        <member name="F:PlariumTestGame.Model.Entities.CoreEntities.NameGenerator.chars">
+            <summary>
+            available characters for generating the asteroid name
+            </summary>
+        </member>
+        <member name="F:PlariumTestGame.Model.Entities.CoreEntities.NameGenerator.satellites">
+            <summary>
+            available satellite names to generate asteroid name
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.CoreEntities.NameGenerator.GenerateName(System.Object)">
+            <summary>
+            method for generating a name based 
+            on the type of object (planet \ asteroid)
+            </summary>
+            <param name="obj">object to generate the name</param>
+            <returns>generated object name</returns>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.CoreEntities.Planet">
+            <summary>
+            Planet- one of the main objects in a game.
+            Characterized by unique name and a tile(image).
+            Allows dig an ore from it.
+            Has endless ore reserves.
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Planet.Name">
+            <summary>
+            Planet name. Generates from satellites of the planets names.
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Planet.Tile">
+            <summary>
+            Planet image.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.CoreEntities.Planet.#ctor(System.Drawing.Image)">
+            <summary>
+            Constructor inicializes a planet image.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Throws when an image is null.</exception>
+            <param name="img">initial image</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.CoreEntities.Spaceship">
+            <summary>
+            The core object in a game. Controls by a user.
+            Characterized by a big amount of characteristics, 
+            including a matrix of ship modules, current
+            position(coordinates), amount of cryptocurrency,
+            image and so on. 
+            Implements an observer pattern with the aim of
+            future ViewModel layer notifying. 
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Subscribers">
+            <summary>
+            Observer realization
+            To renew info in views
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.#ctor(System.Double,System.Int32)">
+            <summary>
+            Constructor implements base params initialization
+            and image\point setting.
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when initial money or energy is wrong. </exception>
+            <param name="cryptocurrency">start money amount</param>
+            <param name="energy">start energy amount</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Accumulator">
+            <summary>
+            Class of accumulator module.
+            Inherits from model of basic ship module
+             Energy storage. Cannot be near Storage
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Accumulator.LimitEnergy">
+            <summary>
+            Limit of an energy in a module.
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws if a value is illegal.</exception>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Accumulator.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Accumulator.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Collector">
+            <summary>
+            Class of collector module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Collector.CollectVolume">
+            <summary>
+            Volume of ore collecting
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Collector.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Collector.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.CommandCenter">
+            <summary>
+            Class of command center module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.CommandCenter.FramesLimit">
+            <summary>
+            Limit of frames.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.CommandCenter.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.CommandCenter.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Converter">
+            <summary>
+            Class of converter module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Converter.AmountOrePer1MBt">
+            <summary>
+            Amount converted ore per 1 mbt
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Converter.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Converter.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Engine">
+            <summary>
+            Class of command center module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Engine.ConsumePerFight">
+            <summary>
+            Energy consumption per 1 fight
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Engine.ConsumePer100km">
+            <summary>
+            Energy consumption per 100km of flight.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Engine.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Engine.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Frame">
+            <summary>
+            Class of frame module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Frame.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Frame.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Generator">
+            <summary>
+            Class of generator module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Generator.AmountMBtPer100km">
+            <summary>
+            Amount of generated energy per 100 km.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Generator.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Generator.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Gun">
+            <summary>
+            Class of gun module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Gun.Damage">
+            <summary>
+            Damage per 1 attack
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Gun.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Gun.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Repairer">
+            <summary>
+            Class of repairer module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Repairer.Efficiency">
+            <summary>
+            KPD of repair per 10 minutes
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Repairer.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Repairer.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory">
+            <summary>
+            Abstract model of basic ship module for futher inheritance
+            Implements 
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.Level">
+            <summary>
+            Implements a check for the correctness of establishing a new level
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.Price">
+            <summary>
+            Price of a module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.Durability">
+            <summary>
+            Module durability
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.Tile">
+            <summary>
+            Image of a module
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.ChangeLevel">
+            <summary>
+            Implements a check for establishing a new 
+            level and updating all characteristics of the module.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.PropertiesChange">
+            <summary>
+            An abstract method for subsequent implementation 
+            in child classes in order to establish specific 
+            changes in the values ​​of characteristics
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.ShipModuleFactory.#ctor(System.Int32)">
+            <summary>
+            Constructor.Init a module level
+            </summary>
+            <param name="level">init level</param>
+        </member>
+        <member name="T:PlariumTestGame.Model.Entities.ShipModules.Storage">
+            <summary>
+            Class of storage module.
+            Inherits from model of basic ship module
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.ShipModules.Storage.OreLimit">
+            <summary>
+            Limit of ore containing
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Storage.PropertiesChange">
+            <summary>
+            Changes all properties depends on current level.
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.ShipModules.Storage.#ctor(System.Int32)">
+            <summary>
+            Constructor. Initializes level and checks its correctness
+            </summary>
+            <exception cref="T:System.ArgumentException">Throws when init level is wrong.</exception>
+            <param name="level">init level</param>
+        </member>
+    </members>
+</doc>

@@ -8,11 +8,29 @@ using PlariumTestGame.Model.Entities.CoreEntities;
 
 namespace PlariumArcade.ViewModel.Initialization
 {
-  public class GameController: IViewSubscriber
+    /// <summary>
+    /// the main class in the game.
+    /// It is created and starts its work when you start 
+    /// the main screen of the game. Conducts world generation,
+    /// data and GUI synchronization and creates a display of all elements
+    /// </summary>
+    public class GameController: IViewSubscriber
     {
+        /// <summary>
+        /// Main game screen
+        /// </summary>
         public MainGameScreen Screen { get; set; }
+        /// <summary>
+        /// Screen of all ship modules
+        /// </summary>
         public ShipModulesMenu ModulesMenu { get; set; }
+        /// <summary>
+        /// Game data storage
+        /// </summary>
         public WorldData WorldData { get; set; }
+        /// <summary>
+        /// Controller of a big part of game events
+        /// </summary>
         public EventsController EvController { get; set; }
 
         /// <summary>
@@ -26,7 +44,9 @@ namespace PlariumArcade.ViewModel.Initialization
             Screen.SetDamageStat(WorldData.Spaceship.Damage);
             Screen.SetStrengthStat(WorldData.Spaceship.Strength, WorldData.Spaceship.MaxStrength);
         }
-
+        /// <summary>
+        /// Update modules views due to player's data changes
+        /// </summary>
         public void RenewModulesInfo() {
 
             ModulesMenu.SetStrength(WorldData.Spaceship.Strength,WorldData.Spaceship.MaxStrength);
@@ -42,7 +62,12 @@ namespace PlariumArcade.ViewModel.Initialization
             ModulesMenu.SetEfficiency(WorldData.Spaceship.Efficiency);
 
         }
-
+        /// <summary>
+        /// The main method of this class. Performs data loading,
+        /// world generation, graphics synchronization and 
+        /// connection of the required controllers
+        /// </summary>
+        /// <param name="screen">current game screen</param>
         public GameController(MainGameScreen screen) 
         {
             #region DataDownloading
@@ -71,13 +96,22 @@ namespace PlariumArcade.ViewModel.Initialization
             EvController = new EventsController(this, Screen);
             #endregion
         }
+        /// <summary>
+        /// Draws modules on a modules screen
+        /// </summary>
         public void ShowModulesGraphics() {
             ModulesDrawingController.DrawModules(ModulesMenu);
         }
+        /// <summary>
+        /// Draws all map object and a spaceship
+        /// </summary>
         public void ShowGraphics() {
             MapDrawingController.DrawMap(Screen);
             ShipDrawingController.DrawObject(Screen, image: WorldData.Spaceship.Tile, WorldData.Spaceship.Coordinates);
         }
+        /// <summary>
+        /// Generates a new world according to the specified values
+        /// </summary>
         public void GenerateNewWorld()  
         {        
             new WorldObjectsGenerator().GenerateNewWorld(amount_planets: 2,amount_asteroids: 0,amount_orbitalStation: 1);

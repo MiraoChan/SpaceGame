@@ -1,6 +1,7 @@
 ﻿
 namespace PlariumArcade
 {
+ 
     partial class ShipModulesMenu
     {
         /// <summary>

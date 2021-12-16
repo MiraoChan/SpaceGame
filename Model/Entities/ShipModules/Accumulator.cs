@@ -8,11 +8,15 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// <summary>
     /// Class of accumulator module.
     /// Inherits from model of basic ship module
+    ///  Energy storage. Cannot be near Storage
     /// </summary>
     public sealed class Accumulator : ShipModuleFactory
     {
         private int limitEnergy;
-
+        /// <summary>
+        /// Limit of an energy in a module.
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Throws if a value is illegal.</exception>
         public int LimitEnergy 
         {
             get => limitEnergy;
@@ -39,7 +43,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 300;
                         Durability = 15;
                         LimitEnergy = 2000000;
-                        Tile = MediaData.ImageModules2lvl[this.GetType().ToString().Split('.').Last()];
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 3:
@@ -47,7 +51,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 450;
                         Durability = 20;
                         LimitEnergy = 3000000;
-                        Tile = MediaData.ImageModules3lvl[this.GetType().ToString().Split('.').Last()];
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
 
@@ -55,9 +59,14 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                     break;
             }
         }
+        /// <summary>
+        /// Constructor. Initializes level and checks its correctness
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Throws when init level is wrong.</exception>
+        /// <param name="level">init level</param>
         public Accumulator(int level) : base(level)
         {
-            if (level > 3 || level < 1) { throw new ArgumentException("wrong level data"); }
+            if (level > 3 || level < 1)  throw new ArgumentException("wrong level data"); 
             Level = level;
             PropertiesChange();
         }

@@ -11,17 +11,18 @@ using PlariumArcade.ViewModel.Initialization;
 
 namespace PlariumArcade
 {
+    /// <summary>
+    /// This form is a display of the game
+    /// menu with the ability to start the game
+    /// </summary>
     public partial class MenuScreen : Form
-    {
-        public Label MainLabel { get {return mainLabel; } set {mainLabel=value; } }
-        public Button StartButton { get { return startButton; } set { startButton = value; } }
-        public Button ExitButton  { get { return exitButton; } set { exitButton = value; } }
-        
+    { 
+     /// <summary>
+     /// Form constructor
+     /// </summary>
         public MenuScreen()
         {
             InitializeComponent();
-
-            new FontInstaller().SetMenuFont(this);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -32,8 +33,8 @@ namespace PlariumArcade
         private void MVtStat_Click(object sender, EventArgs e)
         {
             this.Hide();
-          //var gameScreen = 
-                new MainGameScreen();
+         
+             _= new MainGameScreen();
         }
     }
 }

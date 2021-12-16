@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using PlariumArcade.Model.DL;
 
 namespace PlariumTestGame.Model.Entities.ShipModules
@@ -9,6 +10,9 @@ namespace PlariumTestGame.Model.Entities.ShipModules
     /// </summary>
     public sealed class Converter : ShipModuleFactory
     {
+        /// <summary>
+        /// Amount converted ore per 1 mbt
+        /// </summary>
         public int AmountOrePer1MBt { get; set; }
 
         /// <summary>
@@ -31,7 +35,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 270;
                         Durability = -3;
                         AmountOrePer1MBt = 4;
-                        Tile = MediaData.ImageModules2lvl[this.GetType().ToString().Split('.').Last()];
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
                 case 3:
@@ -39,7 +43,7 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                         Price = 365;
                         Durability = 0;
                         AmountOrePer1MBt = 3;
-                        Tile = MediaData.ImageModules3lvl[this.GetType().ToString().Split('.').Last()];
+                        Tile = MediaData.ImageModules1lvl[this.GetType().ToString().Split('.').Last()];
                         break;
                     }
 
@@ -47,8 +51,14 @@ namespace PlariumTestGame.Model.Entities.ShipModules
                     break;
             }
         }
+        /// <summary>
+        /// Constructor. Initializes level and checks its correctness
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Throws when init level is wrong.</exception>
+        /// <param name="level">init level</param>
         public Converter(int level) : base(level)
         {
+            if (level > 3 || level < 1) throw new ArgumentException("wrong level data");
             Level = level;
             PropertiesChange();
         }

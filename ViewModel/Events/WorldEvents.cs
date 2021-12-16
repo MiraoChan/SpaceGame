@@ -14,11 +14,23 @@ using PlariumTestGame.Model.Entities.CoreEntities;
 
 namespace PlariumArcade.ViewModel.Events
 {
-   public class WorldEvents
+    /// <summary>
+    /// This class implements the interaction of
+    /// the ship with other objects in the world
+    /// in a collision.
+    /// </summary>
+    public class WorldEvents
     {
-        
+        /// <summary>
+        /// This method implements checking the intersection 
+        /// of images of the ship and objects on the map with
+        /// a call to subsequent actions.
+        /// </summary>
+        /// <exception cref="System.ArgumentNullException">Throws if screen is null</exception>
+        /// <param name="Screen">current main game screen</param>
         public void CheckCollision(MainGameScreen Screen) 
-        {       
+        {
+            if (Screen == null) throw new ArgumentNullException("Screen");
             foreach (var pictureBox in Screen.Controls)
             {
                 if (pictureBox is PictureBox box) {
@@ -45,6 +57,13 @@ namespace PlariumArcade.ViewModel.Events
         }
 
         #region Events
+        /// <summary>
+        /// This method implements the collection of ore in
+        /// a collision with an asteroid. When collecting 
+        /// the maximum amount of aruda, the asteroid dies
+        /// </summary>
+        /// <param name="Screen">current screen</param>
+        /// <param name="box">current asteroid</param>
         private void Asteroid_Action(MainGameScreen Screen,PictureBox box)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to collect ore?"+"Amount:"+ ((Asteroid)WorldData.WorldMap[box.Location.X / 80, box.Location.Y / 80]).AmountOfOre,
@@ -65,6 +84,13 @@ namespace PlariumArcade.ViewModel.Events
                 }
             }
         }
+        /// <summary>
+        /// This method implements the collection of ore in
+        /// a collision with an asteroid.When collected, 
+        /// there is a chance to get into a battle with pirates
+        /// </summary>
+        /// <param name="Screen">current screen</param>
+        /// <param name="box">current planet</param>
         private void Planet_Action(MainGameScreen Screen, PictureBox box)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to collect ore?", ((Planet)WorldData.WorldMap[box.Location.X/80, box.Location.Y/80]).Name, MessageBoxButtons.YesNo);
@@ -86,6 +112,12 @@ namespace PlariumArcade.ViewModel.Events
                 }
             }
         }
+        /// <summary>
+        /// This method implements interaction with the orbital 
+        /// station, that is, getting into the window for
+        /// buying / selling resources
+        /// </summary>
+        /// <param name="Screen">current screen</param>
         private void OrbitalStation_Action(MainGameScreen Screen)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to enter orbital station?", "Orbital station", MessageBoxButtons.YesNo);
@@ -95,13 +127,20 @@ namespace PlariumArcade.ViewModel.Events
                 menu.Show();            
             }
         }
+        /// <summary>
+        /// This class is responsible for the generation
+        /// of asteroids after three victories over pirates
+        /// with further cancellation of the counter
+        /// </summary>
+        /// <param name="Screen">current screen</param>
         private void CheckOreCollecting(MainGameScreen Screen)
         {
             if (new Random().Next(0, 100) <= 40 ) 
             {
                _= new FightEvent();            
             }
-            if (WorldData.WinsCounter == 3) {
+            if (WorldData.WinsCounter == 3) 
+            {
                 WorldData.WinsCounter = 0;
                 new WorldObjectsGenerator().GenerateAsteroid();
                 Screen.Controller.ShowGraphics();

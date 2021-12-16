@@ -10,9 +10,19 @@ using PlariumArcade.ViewModel.Events;
 
 namespace PlariumArcade.ViewModel.GraphicControllers
 {
+    /// <summary>
+    /// This class is responsible for updating \ rendering 
+    /// the graphical representation of the ship modules
+    /// </summary>
     public static class ModulesDrawingController
     {
+        /// <summary>
+        /// Matrix of images of ship modules
+        /// </summary>
         public static PictureBox[,] ModuleObjects { get; set; } = new PictureBox[6, 9];
+        /// <summary>
+        /// Current modules menu screen
+        /// </summary>
         public static ShipModulesMenu Screen{ get; set; }
     /// <summary>
     /// render modules of a ship on a ShipModulesMenu screen
@@ -101,6 +111,7 @@ namespace PlariumArcade.ViewModel.GraphicControllers
         /// <summary>
         /// Creates a new PictureBox due to module
         /// </summary>
+        /// <param name="name">name of a module</param>
         /// <param name="image">object image</param>
         /// <param name="p">object location(point)</param>
         /// <returns>new PictureBox</returns>

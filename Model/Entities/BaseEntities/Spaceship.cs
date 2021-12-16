@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using PlariumArcade.Model.DataControllers;
 using PlariumArcade.Model.Entities.BaseEntities;
@@ -7,20 +8,17 @@ using PlariumTestGame.Model.Entities.ShipModules;
 
 namespace PlariumTestGame.Model.Entities.CoreEntities
 {
+    /// <summary>
+    /// The core object in a game. Controls by a user.
+    /// Characterized by a big amount of characteristics, 
+    /// including a matrix of ship modules, current
+    /// position(coordinates), amount of cryptocurrency,
+    /// image and so on. 
+    /// Implements an observer pattern with the aim of
+    /// future ViewModel layer notifying. 
+    /// </summary>
     public class Spaceship: ITileAble
     {
-        /// <summary>
-        /// enum of possible spaceship states
-        /// </summary>
-        public enum State
-        {
-            STATE_STANDING,
-            STATE_GOING,
-            STATE_DIGGING,
-            STATE_FIGHTING,
-            STATE_BUYING,
-            STATE_LISTENING
-        }
 
         #region Fields
 
@@ -85,15 +83,20 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         public List<IViewSubscriber> Subscribers { get; set; }
         public void NotifyParamChanges()
         {
-            foreach (var sub in Subscribers)
-            {
-                sub.RenewInfo();
-            }
+            foreach (var sub in Subscribers) sub.RenewInfo();
+            
         }
         #endregion
-
+        /// <summary>
+        /// Constructor implements base params initialization
+        /// and image\point setting.
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Throws when initial money or energy is wrong. </exception>
+        /// <param name="cryptocurrency">start money amount</param>
+        /// <param name="energy">start energy amount</param>
         public Spaceship(double cryptocurrency, int energy) 
         {
+            if (cryptocurrency < 0 || energy < 0)  throw new ArgumentException("cryptocurrency"); 
             Subscribers = new List<IViewSubscriber>();
             shipModules = new ShipModuleFactory[40, 40];
             shipModules[5, 5] = new Frame(1);

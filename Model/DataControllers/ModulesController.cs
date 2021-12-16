@@ -1,21 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using PlariumArcade.Model.DB;
 using PlariumTestGame.Model.Entities.CoreEntities;
 using PlariumTestGame.Model.Entities.ShipModules;
 
 namespace PlariumArcade.Model.DataControllers
 {
-  public  class ModulesController
+    /// <summary>
+    /// Class ModulesController implements
+    /// a deep synchronization modules data changes and 
+    /// all spaceship characteristic
+    /// </summary>
+    public class ModulesController
     {
+        /// <summary>
+        /// Owner of all modules.
+        /// </summary>
        public Spaceship Ship { get; set; }
 
-        public ModulesController() { Ship = WorldData.Spaceship; }
+        /// <summary>
+        /// Constructor.Initializes a spaceship
+        /// from WorldData.
+        /// </summary>
+        public ModulesController() 
+        {            
+            Ship = WorldData.Spaceship;
+        }
+
+        /// <summary>
+        /// Changes all spaceship characteristics 
+        /// due to available characteristics in 
+        /// modules of various types.
+        /// </summary>
         public void RefreshShipData() 
         {
+            #region ResettingAllParameters
+
             WorldData.Spaceship.LimitEnergy = 0;
             WorldData.Spaceship.MaxStrength = 0;
             WorldData.Spaceship.CollectVolume = 0;
@@ -27,10 +46,13 @@ namespace PlariumArcade.Model.DataControllers
             WorldData.Spaceship.Damage = 0;
             WorldData.Spaceship.Efficiency = 0;
             WorldData.Spaceship.OreLimit = 0;
+
+            #endregion
+
             foreach (var module in WorldData.Spaceship.ShipModules) 
             {
                 if (module != null) {
-                    switch (module.GetType().ToString().Split('.').Last())                   
+                    switch (module.GetType().ToString().Split('.').Last())  //Gets the name of a module class                 
                     {
                         case "Accumulator":
                             {
@@ -95,7 +117,6 @@ namespace PlariumArcade.Model.DataControllers
                                 break; 
                             }
                     }
-
 
                 }
             }

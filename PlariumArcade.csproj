@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PlariumArcade.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -67,16 +68,16 @@
     <Compile Include="View\MenuScreen.Designer.cs">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Actions\ActionController.cs" />
+    <Compile Include="Model\DataControllers\ActionController.cs" />
     <Compile Include="Model\DataControllers\ModulesController.cs" />
     <Compile Include="Model\Data\MediaData.cs" />
     <Compile Include="Model\Data\WorldData.cs" />
     <Compile Include="Model\Entities\BaseEntities\Enemy.cs" />
     <Compile Include="Model\Entities\BaseEntities\orbitalStation.cs" />
-    <Compile Include="Model\Actions\Generators\WorldObjectsGenerator.cs" />
+    <Compile Include="Model\Generators\WorldObjectsGenerator.cs" />
     <Compile Include="Model\Interfaces\ITileAble.cs" />
     <Compile Include="Model\Entities\BaseEntities\Asteroid.cs" />
-    <Compile Include="Model\Actions\Generators\NameGenerator.cs" />
+    <Compile Include="Model\Generators\NameGenerator.cs" />
     <Compile Include="Model\Entities\BaseEntities\Planet.cs" />
     <Compile Include="Model\Entities\BaseEntities\Spaceship.cs" />
     <Compile Include="Model\Entities\ShipModules\Accumulator.cs" />
@@ -99,7 +100,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Interfaces\IDraw.cs" />
     <Compile Include="View\ShipModulesMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,25 +169,6 @@
     <Content Include="Content\Images\Tiles\Modules\1lvl\Gun1.png" />
     <Content Include="Content\Images\Tiles\Modules\1lvl\Repairer1.png" />
     <Content Include="Content\Images\Tiles\Modules\1lvl\Storage1.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Accumulator2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Collector2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\CommandCenter2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Converter2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Engine2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Frame2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Generator2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Gun2.png" />
-    <Content Include="Content\Images\Tiles\Modules\2lvl\Repairer2.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Accumulator3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Collector3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\CommandCenter3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Converter3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Engine3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Frame3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Generator3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Gun3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Repairer3.png" />
-    <Content Include="Content\Images\Tiles\Modules\3lvl\Storage3.png" />
     <Content Include="Content\Images\Tiles\BaseTiles\Pirates.png" />
     <Content Include="Content\Images\Tiles\BaseTiles\Planet1.png" />
     <Content Include="Content\Images\Tiles\BaseTiles\Planet2.png" />

@@ -13,43 +13,87 @@ using PlariumArcade.ViewModel.Initialization;
 
 namespace PlariumArcade
 {
+    /// <summary>
+    /// This form represents the display of 
+    /// the entire main playing field with
+    /// the ability to exit the game
+    /// </summary>
     public partial class MainGameScreen : Form
     {
 
         #region Properties
+        /// <summary>
+        /// Main game controller
+        /// </summary>
         public GameController Controller { get; set; }
-
-        public FlowLayoutPanel GetMainMapPanel() { return MainMapPanel; }
+        /// <summary>
+        /// Cryptocurrency display
+        /// </summary>
         public Button MoneyStat { get{ return moneyStat; } }
+        /// <summary>
+        /// Ore display
+        /// </summary>
         public Button OreStat { get { return oreStat; } }
+        /// <summary>
+        /// MVt display
+        /// </summary>
         public Button MVtStat { get { return mVtStat; } }
+        /// <summary>
+        /// Damage display
+        /// </summary>
         public Button DamageStat { get { return damageStat; } }
+        /// <summary>
+        /// Strength display
+        /// </summary>
         public Button StrengthStat { get { return strengthStat; } }
-        public Button ExitButton { get { return exitButton; } }
+
         #endregion
 
         #region ValueSetters
+        /// <summary>
+        /// Money display setter
+        /// </summary>
+        /// <param name="val">current value</param>
         public void SetMoneyStat(double val) 
         {
             moneyStat.Text = "$ : " + val;
             moneyStat.Refresh();
             this.Show();
         }
+        /// <summary>
+        /// Ore display setter
+        /// </summary>
+        /// <param name="val">currOre</param>
+        /// <param name="val1">MaxOre</param>
         public void SetOreStat(int val,int val1)
         {
             oreStat.Text = "Ore : "+val+"/"+val1;           
             this.Show();
         }
+        /// <summary>
+        /// MVt display setter
+        /// </summary>
+        /// <param name="val">currenergy</param>
+        /// <param name="val1">maxEnergy</param>
         public void SetMVtStat(int val, int val1)
         {
             mVtStat.Text = "MVt : " + val+"/"+val1;
             this.Show();
         }
+        /// <summary>
+        /// Damage display setter
+        /// </summary>
+        /// <param name="val">current value</param>
         public void SetDamageStat(int val)
         {
             damageStat.Text = "Damage : " + val;
             this.Show();
         }
+        /// <summary>
+        /// Strength display setter
+        /// </summary>
+        /// <param name="curStrenght">current value</param>
+        ///  /// <param name="maxStrenght">max value</param>
         public void SetStrengthStat(int curStrenght,int maxStrenght)
         {
             strengthStat.Text = "Strength : " + curStrenght + "/" + maxStrenght;
@@ -69,6 +113,9 @@ namespace PlariumArcade
 
         #endregion
 
+        /// <summary>
+        /// Controller.Initialixes all graphic screen elements.
+        /// </summary>
         public MainGameScreen()
         {         
             InitializeComponent();

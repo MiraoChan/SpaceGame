@@ -14,23 +14,34 @@ namespace PlariumArcade.Model.DL
     {
 
         #region Images
+        /// <summary>
+        /// Collection of possible planet images
+        /// </summary>
         public static List<Image> ImagePlanet { get; set; } =
           new List<Image>()
           {
              Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/Planet1.png"),
              Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/Planet2.png")
           };
+        /// <summary>
+        /// Collection of possible asteroid images
+        /// </summary>
         public static List<Image> ImageAsteroid { get; set; } =
           new List<Image>()
           {
               Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/Asteroid.png")
           };
-
+        /// <summary>
+        /// Collection of possible backgrounds
+        /// </summary>
         public static List<Image> ImageSpaceShip { get; set; } =
           new List<Image>()
           {
           Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/SpaceShip.png")
           };
+        /// <summary>
+        /// Collection of possible orbital stations images
+        /// </summary>
         public static List<Image> ImageOrbitalStation { get; set; } =
           new List<Image>()
           {
@@ -38,6 +49,9 @@ namespace PlariumArcade.Model.DL
 
           };
         #region ModulesImages
+        /// <summary>
+        /// Collections of possible modules images
+        /// </summary>
         public static Dictionary<string, Image> ImageModules1lvl { get; set; } =
           new Dictionary<string, Image>()
           {

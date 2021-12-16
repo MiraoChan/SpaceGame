@@ -11,9 +11,17 @@ namespace PlariumArcade.Model.Entities.BaseEntities
     /// </summary>
     public class Enemy
     {
-
+        /// <summary>
+        /// Enemy current strength
+        /// </summary>
         public int Strength { get; set; }
+        /// <summary>
+        /// Enemy Max Strength
+        /// </summary>
         public int MaxStrength { get; set; }
+        /// <summary>
+        /// Enemy Damage
+        /// </summary>
         public int Damage { get; set; }
 
         /// <summary>

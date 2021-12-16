@@ -5,6 +5,10 @@ using PlariumTestGame.Model.Entities.CoreEntities;
 
 namespace PlariumArcade.Model.Actions
 {
+    /// <summary>
+    /// This class implements most of the events that
+    /// are processed after being called from event handlers
+    /// </summary>
     public class ActionController
     {
         /// <summary>

@@ -52,26 +52,79 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         #region Properties
 
         #region ModulesProperties
+        /// <summary>
+        /// MaxStrength property
+        /// </summary>
         public int MaxStrength { get { return maxStrength; } set { maxStrength = value; NotifyParamChanges(); } }
+        /// <summary>
+        /// Strength property
+        /// </summary>
         public int Strength { get { return strength; } set { strength = value; NotifyParamChanges(); } }
+        /// <summary>
+        /// Damage property
+        /// </summary>
         public int Damage { get { return damage; } set { damage = value; NotifyParamChanges(); } }
+        /// <summary>
+        /// Energy property
+        /// </summary>
         public int Energy { get { return energy; } set { energy = value; NotifyParamChanges(); } }
+        /// <summary>
+        /// Ore property
+        /// </summary>
         public int Ore { get { return ore; } set { ore = value; NotifyParamChanges(); } }
+        /// <summary>
+        /// Collect ore property
+        /// </summary>
         public int CollectVolume {get { return collectVolume; }set { collectVolume = value; }}
+        /// <summary>
+        /// Limit energy property
+        /// </summary>
         public int LimitEnergy { get { return limitEnergy; } set { limitEnergy = value; } }
+        /// <summary>
+        /// Frames limit property
+        /// </summary>
         public int FramesLimit { get { return framesLimit; } set { framesLimit = value; } }
+        /// <summary>
+        /// Amount ore per 1 MBt property
+        /// </summary>
         public int AmountOrePer1MBt { get { return amountOrePer1MBt; } set { amountOrePer1MBt = value; } }
+        /// <summary>
+        /// Consume per fight property
+        /// </summary>
         public int ConsumePerFight { get { return consumePerFight; } set { consumePerFight = value; } }
+        /// <summary>
+        /// Consume per 100 km property
+        /// </summary>
         public int ConsumePer100km { get { return consumePer100km; } set { consumePer100km = value; } }
+        /// <summary>
+        /// Amount MVt per 100km property
+        /// </summary>
         public int AmountMBtPer100km { get { return amountMBtPer100km; } set { amountMBtPer100km = value; } }
+        /// <summary>
+        /// Efficiency property
+        /// </summary>
         public int Efficiency { get { return efficiency; } set { efficiency = value; } }
+        /// <summary>
+        /// Ore limit property
+        /// </summary>
         public int OreLimit { get { return oreLimit; } set { oreLimit = value; } }
 
         #endregion
-
+        /// <summary>
+        /// Money property
+        /// </summary>
         public double Cryptocurrency { get { return cryptocurrency; } set { cryptocurrency = value; NotifyParamChanges(); } }
+        /// <summary>
+        /// Ship modules property
+        /// </summary>
         public ShipModuleFactory[,] ShipModules { get { return shipModules; } set { shipModules = value; } }
+        /// <summary>
+        /// Location property
+        /// </summary>
         public Point Coordinates { get { return coordinates; } set { coordinates = value; } }
+        /// <summary>
+        /// Image property
+        /// </summary>
         public Image Tile { get { return tile; } set { tile = value; } }
         #endregion
 
@@ -81,6 +134,9 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
         /// To renew info in views
         /// </summary>
         public List<IViewSubscriber> Subscribers { get; set; }
+        /// <summary>
+        /// Notifying subs about changes
+        /// </summary>
         public void NotifyParamChanges()
         {
             foreach (var sub in Subscribers) sub.RenewInfo();

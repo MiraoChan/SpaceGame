@@ -1,0 +1,21 @@
+Start fighting : SpaceShip strenght:  120/120
+SpaceShip damage:  100
+Enemy strenght  : 70/70
+Enemy damage:  32
+---------------
+Enemy attack -> 
+Damage : 32
+SpaceShip strenght:  88/120
+Enemy strenght  : 70/70
+---------------
+Ship attack -> 
+Damage : 100
+SpaceShip strenght:  88/120
+Enemy strenght  : -30/70
+---------------
+
+ End fighting : SpaceShip strenght:  88/120
+SpaceShip damage:  100
+Enemy strenght  : -30/70
+Enemy damage:  32
+---------------

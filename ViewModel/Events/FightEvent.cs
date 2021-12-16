@@ -1,4 +1,9 @@
-﻿using System.Threading;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 using PlariumArcade.Model.DB;
 using PlariumArcade.Model.Entities.BaseEntities;
@@ -11,6 +16,7 @@ namespace PlariumArcade.ViewModel.Events
         public bool FightResult { get; set; }
         public FightScreen Screen { get; set; }
         public FightEvent() {
+
             #region initialization
             Screen = new FightScreen();
             Screen.Show();
@@ -21,19 +27,66 @@ namespace PlariumArcade.ViewModel.Events
             Screen.EnemyStrength.Value = Enemy.MaxStrength;
             Screen.Refresh();
             #endregion
+            int numberFight=228;
+            string res = Directory.GetFiles("C:/Users/user/Desktop/SpaceGameRep/bin/Debug")                                 
+                                  .Last(t => t.Contains("log"));
+          
 
-            if (Fight()) 
+            if (res != null)
             {
-                CollectReward();
-                WorldData.WinsCounter++;
-                MessageBox.Show("Win! Reward : 1000 ore, 100 MVt", "Win", MessageBoxButtons.OK);
-                Screen.Dispose();
-            } 
+                var resInt = res.ToCharArray()
+                          .Where(t => Char.IsDigit(t))
+                          .Select(t => t)
+                          .ToList();
+                StringBuilder str = new StringBuilder();
+                foreach (var i in resInt)
+                {
+                    str.Append(i);
+                }
+                numberFight=  int.Parse(str.ToString());
+            }
             else 
             {
-                MessageBox.Show("Losing! End of a game.", "Losing", MessageBoxButtons.OK);
-                Application.Exit();
+               numberFight = 0;
             }
+            using (StreamWriter writer = File.AppendText("log"+ (numberFight+1) + ".txt"))
+            {
+                Log("Start fighting : ",writer);
+                if (Fight(writer))
+                {
+                    CollectReward();
+                    WorldData.WinsCounter++;
+                    Log("End fighting : ", writer);
+                    writer.Close();
+                    MessageBox.Show("Win! Reward : 1000 ore, 100 MVt", "Win", MessageBoxButtons.OK);                   
+                    Screen.Dispose();                 
+                }
+                else
+                {
+                    Log("End fighting : ", writer);
+                    writer.Close();
+                    MessageBox.Show("Losing! End of a game.", "Losing", MessageBoxButtons.OK);
+                    Application.Exit();
+                }
+            }
+        }
+
+        public void LogFight(string fighter,string damage, TextWriter writer)
+        {
+            writer.WriteLine(fighter+" attack -> ");
+            writer.WriteLine($"Damage : "+damage);
+            writer.WriteLine($"SpaceShip strenght:  {WorldData.Spaceship.Strength}/{WorldData.Spaceship.MaxStrength}");
+            writer.WriteLine($"Enemy strenght  : {this.Enemy.Strength}/{this.Enemy.MaxStrength}");
+            writer.WriteLine("---------------");
+        }
+        public void Log(string str, TextWriter writer)
+        {
+            writer.Write(str);
+            writer.WriteLine($"SpaceShip strenght:  {WorldData.Spaceship.Strength}/{WorldData.Spaceship.MaxStrength}");
+            writer.WriteLine($"SpaceShip damage:  {WorldData.Spaceship.Damage}");
+            writer.WriteLine($"Enemy strenght  : {this.Enemy.Strength}/{this.Enemy.MaxStrength}");
+            writer.WriteLine($"Enemy damage:  {this.Enemy.Damage}");
+            writer.WriteLine("---------------");
         }
         public void CollectReward() 
         {
@@ -55,13 +108,15 @@ namespace PlariumArcade.ViewModel.Events
                 WorldData.Spaceship.Energy += WorldData.Spaceship.LimitEnergy - WorldData.Spaceship.Energy;
             }
         }
-        public bool Fight()
+        public bool Fight(StreamWriter writer)
         {
             while (true)
             {
-                if (!EnemyAttack()) { return false; }
+                if (!EnemyAttack()) { LogFight("Enemy",this.Enemy.Damage.ToString(),writer); return false; }
+                LogFight("Enemy", this.Enemy.Damage.ToString(), writer);
                 Thread.Sleep(3000);
-                if (ShipAttack()) { return true; }
+                if (ShipAttack()) { LogFight("Ship", WorldData.Spaceship.Damage.ToString(), writer); return true; }
+                LogFight("Ship", WorldData.Spaceship.Damage.ToString(), writer);
                 Thread.Sleep(3000);
             }
          }
@@ -80,7 +135,7 @@ namespace PlariumArcade.ViewModel.Events
                 Screen.EnemyStrength.Value = Enemy.Strength;
             }
             Screen.Refresh();
-            if (Enemy.Strength <= 0) { return true; }
+            if (Enemy.Strength <= 0)return true;
             return false;
         }
         public bool EnemyAttack()
@@ -98,7 +153,7 @@ namespace PlariumArcade.ViewModel.Events
                 Screen.ShipStrength.Value = WorldData.Spaceship.Strength;
             }
             Screen.Refresh();
-            if (WorldData.Spaceship.Strength <= 0) { return false; }
+            if (WorldData.Spaceship.Strength <= 0)return false; 
             return true;
         }
 

@@ -11,8 +11,15 @@ using PlariumTestGame.Model.Entities.CoreEntities;
 namespace PlariumArcade.Model.Actions
 {
 
-    class ActionController
+    public class ActionController
     {
+        public bool ChangeLocation() {
+            WorldData.Spaceship.Energy -= WorldData.Spaceship.ConsumePer100km;
+            if (WorldData.Spaceship.Energy <= 0) {
+                return false;
+            }
+            return true;
+        }
         public bool BuyEnergy(string amount,bool delivery) {
           
             if (!int.TryParse(amount, out int res))
@@ -140,7 +147,6 @@ namespace PlariumArcade.Model.Actions
                     return false; 
                 }
             }
-
             return false;
             }
 
@@ -214,7 +220,6 @@ namespace PlariumArcade.Model.Actions
                     { 
                         return false; 
                     }
-
                 }
                 //Not enough asteroid ore  for a trim shipment =>collect all asteroid ore and delete it.
                 if (WorldData.Spaceship.OreLimit - WorldData.Spaceship.CollectVolume >= ((Asteroid)WorldData.WorldMap[WorldData.GetPoint(asteroid).X, WorldData.GetPoint(asteroid).Y]).AmountOfOre)

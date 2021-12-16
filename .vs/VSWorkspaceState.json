@@ -3,8 +3,9 @@
     "",
     "\\Model",
     "\\Model\\Entities",
-    "\\Model\\Entities\\BaseEntities"
+    "\\Model\\Entities\\BaseEntities",
+    "\\Model\\Entities\\ShipModules"
   ],
-  "SelectedNode": "\\ShipModulesMenu.cs",
+  "SelectedNode": "\\Model\\Entities\\ShipModules\\Storage.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlariumArcade.Model.Actions;
 using PlariumArcade.Model.DB;
 using PlariumArcade.ViewModel.Events;
 using PlariumArcade.ViewModel.GraphicControllers;
@@ -25,7 +26,6 @@ namespace PlariumArcade.ViewModel.Initialization
         public void OpenShipModules() {
             ModulesDrawingController.DrawModules(gameController.ModulesMenu);
             gameController.ModulesMenu.Show();
-
         }
 
         public void GoLeft() {
@@ -36,7 +36,10 @@ namespace PlariumArcade.ViewModel.Initialization
                    WorldData.Spaceship.Coordinates.X - 1,
                    WorldData.Spaceship.Coordinates.Y
                     );
+                CheckEnergy();
                 ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                gameController.RenewInfo();
+                gameController.RenewModulesInfo();
                 new WorldEvents().CheckCollision(Screen);
             }
         }
@@ -49,7 +52,10 @@ namespace PlariumArcade.ViewModel.Initialization
                         WorldData.Spaceship.Coordinates.X + 1,
                        WorldData.Spaceship.Coordinates.Y
                         );
-                    ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                CheckEnergy();
+                ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                gameController.RenewInfo();
+                gameController.RenewModulesInfo();
                 new WorldEvents().CheckCollision(Screen);
             }
             }
@@ -62,7 +68,11 @@ namespace PlariumArcade.ViewModel.Initialization
                               WorldData.Spaceship.Coordinates.X,
                                WorldData.Spaceship.Coordinates.Y - 1
                                );
+                CheckEnergy();
+                
                 ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                gameController.RenewInfo();
+                gameController.RenewModulesInfo();
                 new WorldEvents().CheckCollision(Screen);
             }
         }
@@ -75,9 +85,20 @@ namespace PlariumArcade.ViewModel.Initialization
                               WorldData.Spaceship.Coordinates.X,
                               WorldData.Spaceship.Coordinates.Y + 1
                               );
+                CheckEnergy();
                 ShipDrawingController.ReDrawObject(WorldData.Spaceship.Coordinates);
+                gameController.RenewInfo();
+                gameController.RenewModulesInfo();
                 new WorldEvents().CheckCollision(Screen);
             }
+        }
+        public void CheckEnergy() {
+            if (!new ActionController().ChangeLocation())
+            {
+                MessageBox.Show("You are out of energy. End of a game.", "End", MessageBoxButtons.OK);
+                Application.Exit();
+            }
+
         }
     }
 }

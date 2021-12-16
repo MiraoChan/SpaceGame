@@ -56,11 +56,9 @@ namespace PlariumArcade
             this.Show();
         }      
   
-
         #endregion
 
         #region Events
-
         private void MainGameScreen_KeyDown(object sender, KeyEventArgs e)
         {         
             if (e.KeyData == Keys.Left  || e.KeyData == Keys.A) { Thread.Sleep(500); Controller.EvController.GoLeft();  }
@@ -68,7 +66,6 @@ namespace PlariumArcade
             if (e.KeyData == Keys.Up || e.KeyData == Keys.W) { Thread.Sleep(500); Controller.EvController.GoUp(); }
             if (e.KeyData == Keys.Down || e.KeyData == Keys.S) { Thread.Sleep(500); Controller.EvController.GoDown();  }
         }
-
 
         #endregion
 
@@ -78,7 +75,7 @@ namespace PlariumArcade
             Controller = new GameController(this);
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

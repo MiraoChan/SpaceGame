@@ -30,14 +30,14 @@ namespace PlariumArcade
             this.Show();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Screen.Enabled = true;
             this.Close();
             this.Dispose();
         }
 
-        private void buyButton_Click(object sender, EventArgs e)
+        private void BuyButton_Click(object sender, EventArgs e)
         {
          
             if (new ActionController().BuyEnergy(energyAmount.Text, Delivery))
@@ -50,7 +50,7 @@ namespace PlariumArcade
             }
         }
 
-        private void sellButton_Click(object sender, EventArgs e)
+        private void SellButton_Click(object sender, EventArgs e)
         {
             if (new ActionController().SellOre(oreAmount.Text, Delivery))
             {

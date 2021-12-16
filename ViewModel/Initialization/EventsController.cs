@@ -25,7 +25,7 @@ namespace PlariumArcade.ViewModel.Initialization
             this.Screen = Screen;
             ShipDrawingController.Picture.MouseClick += new MouseEventHandler((o, a) => { OpenShipModules(); });
             MapDrawingController.ReDrawMap();
-           // AddOrbitalStationAction();
+          
         }
 
         #region ObjectsClicks

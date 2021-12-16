@@ -56,7 +56,7 @@ namespace PlariumArcade
             this.exitButton.TabIndex = 0;
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // moneyStat
             // 

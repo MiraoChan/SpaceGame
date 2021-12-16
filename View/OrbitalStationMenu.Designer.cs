@@ -96,7 +96,7 @@ namespace PlariumArcade
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Exit station";
             this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // sellButton
             // 
@@ -110,7 +110,7 @@ namespace PlariumArcade
             this.sellButton.TabIndex = 7;
             this.sellButton.Text = "S E L L";
             this.sellButton.UseVisualStyleBackColor = false;
-            this.sellButton.Click += new System.EventHandler(this.sellButton_Click);
+            this.sellButton.Click += new System.EventHandler(this.SellButton_Click);
             // 
             // buyButton
             // 
@@ -124,7 +124,7 @@ namespace PlariumArcade
             this.buyButton.TabIndex = 8;
             this.buyButton.Text = "B U Y";
             this.buyButton.UseVisualStyleBackColor = false;
-            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            this.buyButton.Click += new System.EventHandler(this.BuyButton_Click);
             // 
             // OrbitalStationMenu
             // 

@@ -111,16 +111,10 @@ namespace PlariumArcade
             InitializeComponent();
             this.Hide();
         }
-
-
-
-        private void exit_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {         
             this.Hide();
         }
-
-     
-
     
     }
 }

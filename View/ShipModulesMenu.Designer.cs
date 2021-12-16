@@ -250,7 +250,7 @@ namespace PlariumArcade
             this.exit.TabIndex = 17;
             this.exit.Text = "Exit ship";
             this.exit.UseVisualStyleBackColor = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
+            this.exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // modifyButton
             // 

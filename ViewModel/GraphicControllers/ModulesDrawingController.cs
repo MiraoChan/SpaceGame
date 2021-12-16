@@ -56,7 +56,7 @@ namespace PlariumArcade.ViewModel.GraphicControllers
                             ModuleObjects[x, y] = CreatePictureBox(WorldData.Spaceship.ShipModules[x, y].GetType().ToString().Split('.').Last(),
                                                                    WorldData.Spaceship.ShipModules[x, y].Tile,
                                                                   WorldData.GetModulePoint(WorldData.Spaceship.ShipModules[x, y]));
-                            ModuleObjects[x, y].Click += new EventHandler(pictureBox1_Click);
+                            ModuleObjects[x, y].Click += new EventHandler(Module_Click);
                             ModuleObjects[x, y].BackColor = Color.Transparent;
                             ModuleObjects[x, y].BringToFront();
                         }
@@ -65,7 +65,7 @@ namespace PlariumArcade.ViewModel.GraphicControllers
             }
         }
 
-        private static void pictureBox1_Click(object sender, EventArgs e)
+        private static void Module_Click(object sender, EventArgs e)
         {
             int X = Cursor.Position.X - Screen.Location.X;
             Console.WriteLine(X);
@@ -95,7 +95,7 @@ namespace PlariumArcade.ViewModel.GraphicControllers
             if (pic == null) { throw new ArgumentNullException("pic"); }
             pic.BackColor = Color.Transparent;
             screen.Controls.Add(pic);
-            pic.Click += new EventHandler(pictureBox1_Click);
+            pic.Click += new EventHandler(Module_Click);
             pic.BringToFront();
         }
         /// <summary>

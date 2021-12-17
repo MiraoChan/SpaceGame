@@ -49,7 +49,7 @@ namespace PlariumArcade.ViewModel.Events
 
             //Search for the last fight number
             int numberFight;
-            string res = Directory.GetFiles("C:/Users/user/Desktop/SpaceGameRep/bin/Debug")                                 
+            string res = Directory.GetFiles(Directory.GetCurrentDirectory())                                 
                                   .Last(t => t.Contains("log"));       
             if (res != null)
             {

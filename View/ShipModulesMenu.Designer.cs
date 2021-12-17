@@ -30,6 +30,7 @@ namespace PlariumArcade
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShipModulesMenu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.modulesPanel = new System.Windows.Forms.Panel();
@@ -61,7 +62,6 @@ namespace PlariumArcade
             this.pictureBox1.Size = new System.Drawing.Size(400, 400);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-
             // 
             // exitButton
             // 
@@ -278,10 +278,10 @@ namespace PlariumArcade
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShipModulesMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShipModulesMenu";
-
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.modulesPanel.ResumeLayout(false);
             this.ResumeLayout(false);

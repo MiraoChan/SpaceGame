@@ -29,6 +29,7 @@ namespace PlariumArcade
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FightScreen));
             this.shipPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shipStrength = new System.Windows.Forms.ProgressBar();
@@ -115,6 +116,7 @@ namespace PlariumArcade
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.shipPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FightScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FightScreen";

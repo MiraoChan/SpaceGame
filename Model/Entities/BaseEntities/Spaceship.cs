@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using PlariumArcade.Model.DataControllers;
+using PlariumArcade.Model.DL;
 using PlariumArcade.Model.Entities.BaseEntities;
 using PlariumArcade.Model.Interfaces;
 using PlariumTestGame.Model.Entities.ShipModules;
@@ -167,8 +168,8 @@ namespace PlariumTestGame.Model.Entities.CoreEntities
             this.cryptocurrency = cryptocurrency;
             this.energy = energy;
             coordinates = new Point(3,3);
-            
-            tile = Image.FromFile("C:/Users/user/Desktop/SpaceGameRep/Content/Images/Tiles/BaseTiles/SpaceShip.png");
+
+            tile = MediaData.ImageSpaceShip[0];
         }
     }
 }

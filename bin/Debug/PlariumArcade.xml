@@ -172,6 +172,12 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="T:PlariumArcade.Model.Actions.ActionController">
+            <summary>
+            This class implements most of the events that
+            are processed after being called from event handlers
+            </summary>
+        </member>
         <member name="M:PlariumArcade.Model.Actions.ActionController.ChangeLocation">
             <summary>
             Change amount of energy according to consuming per 100km and changing 
@@ -273,6 +279,31 @@
             the type of object
             </summary>
         </member>
+        <member name="P:PlariumArcade.Model.DL.MediaData.ImagePlanet">
+            <summary>
+            Collection of possible planet images
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DL.MediaData.ImageAsteroid">
+            <summary>
+            Collection of possible asteroid images
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DL.MediaData.ImageSpaceShip">
+            <summary>
+            Collection of possible backgrounds
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DL.MediaData.ImageOrbitalStation">
+            <summary>
+            Collection of possible orbital stations images
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.DL.MediaData.ImageModules1lvl">
+            <summary>
+            Collections of possible modules images
+            </summary>
+        </member>
         <member name="T:PlariumArcade.Model.DB.WorldData">
             <summary>
             Class WorldData acts as a single in-game data 
@@ -326,6 +357,21 @@
             Damage. Attacks a ship in a case of fighting.
             In a case of having 0 amount of strength 
             deletes itself.
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.BaseEntities.Enemy.Strength">
+            <summary>
+            Enemy current strength
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.BaseEntities.Enemy.MaxStrength">
+            <summary>
+            Enemy Max Strength
+            </summary>
+        </member>
+        <member name="P:PlariumArcade.Model.Entities.BaseEntities.Enemy.Damage">
+            <summary>
+            Enemy Damage
             </summary>
         </member>
         <member name="M:PlariumArcade.Model.Entities.BaseEntities.Enemy.#ctor">
@@ -1184,10 +1230,105 @@
             future ViewModel layer notifying. 
             </summary>
         </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.MaxStrength">
+            <summary>
+            MaxStrength property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Strength">
+            <summary>
+            Strength property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Damage">
+            <summary>
+            Damage property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Energy">
+            <summary>
+            Energy property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Ore">
+            <summary>
+            Ore property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.CollectVolume">
+            <summary>
+            Collect ore property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.LimitEnergy">
+            <summary>
+            Limit energy property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.FramesLimit">
+            <summary>
+            Frames limit property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.AmountOrePer1MBt">
+            <summary>
+            Amount ore per 1 MBt property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.ConsumePerFight">
+            <summary>
+            Consume per fight property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.ConsumePer100km">
+            <summary>
+            Consume per 100 km property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.AmountMBtPer100km">
+            <summary>
+            Amount MVt per 100km property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Efficiency">
+            <summary>
+            Efficiency property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.OreLimit">
+            <summary>
+            Ore limit property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Cryptocurrency">
+            <summary>
+            Money property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.ShipModules">
+            <summary>
+            Ship modules property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Coordinates">
+            <summary>
+            Location property
+            </summary>
+        </member>
+        <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Tile">
+            <summary>
+            Image property
+            </summary>
+        </member>
         <member name="P:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.Subscribers">
             <summary>
             Observer realization
             To renew info in views
+            </summary>
+        </member>
+        <member name="M:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.NotifyParamChanges">
+            <summary>
+            Notifying subs about changes
             </summary>
         </member>
         <member name="M:PlariumTestGame.Model.Entities.CoreEntities.Spaceship.#ctor(System.Double,System.Int32)">
